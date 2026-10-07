@@ -8,72 +8,10 @@ import {
   FaStar,
   FaStarHalfAlt,
 } from "react-icons/fa";
+import { site } from "@/data/index";
+import type { CorpEaseTestimonialData } from "@/data/index";
 
-const testimonials = [
-  {
-    name: "Rahul Mehta",
-    role: "Founder, Mehta Traders",
-    text: "The team at CorpEase made my Private Limited company registration completely hassle-free. Their guidance and support were excellent from start to finish. Highly recommended!",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Priya Sharma",
-    role: "CEO, Sharma Enterprises",
-    text: "I registered my LLP with CorpEase and the entire process was smooth and transparent. The team is very professional, responsive and always available for support.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Amit Verma",
-    role: "Managing Director, Verma Solutions",
-    text: "Great experience with CorpEase. They handled my business registration efficiently and kept me updated at every step. Truly professional and reliable service.",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Neha Kapoor",
-    role: "Founder, Kapoor Designs",
-    text: "From GST registration to trademark filing, CorpEase took care of everything. The paperwork was done quickly and I never had to chase anyone for updates.",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Vikram Singh",
-    role: "Director, Singh Logistics",
-    text: "Their MSME registration support helped us unlock benefits we did not even know about. Clear communication and a very knowledgeable team throughout.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Anjali Desai",
-    role: "Co-founder, Desai Foods",
-    text: "Starting a company felt overwhelming until I found CorpEase. They explained every step in simple words and completed my registration ahead of schedule.",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Rohit Gupta",
-    role: "Owner, Gupta Electronics",
-    text: "Affordable pricing, quick turnaround and genuinely helpful support. I have already recommended CorpEase to two friends who are starting their own businesses.",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Sneha Iyer",
-    role: "CEO, Iyer Consulting",
-    text: "CorpEase handled our One Person Company registration and compliance setup smoothly. Their team is responsive and always ready to answer questions.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-  {
-    name: "Karan Malhotra",
-    role: "Managing Partner, Malhotra & Co.",
-    text: "A dependable partner for all our registration needs. Documentation was accurate, deadlines were met and the whole experience was stress-free.",
-    image:
-      "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&crop=faces&w=240&h=240&q=80",
-  },
-];
+const testimonialData: CorpEaseTestimonialData = site.testimonialSec as CorpEaseTestimonialData;
 
 function usePerView() {
   const [perView, setPerView] = useState(3);
@@ -96,10 +34,26 @@ export default function Testimonials() {
   const perView = usePerView();
   const [page, setPage] = useState(0);
 
-  const pages = Math.ceil(testimonials.length / perView);
+  if (!testimonialData) return null;
+
+  const pages = Math.ceil((testimonialData.testimonials?.length || 0) / perView);
   const current = Math.min(page, pages - 1);
   // last page never leaves empty space on the right
-  const firstItem = Math.min(current * perView, testimonials.length - perView);
+  const firstItem = Math.min(current * perView, (testimonialData.testimonials?.length || 0) - perView);
+
+  const renderStars = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<FaStar key={`full-${i}`} />);
+    }
+    if (hasHalfStar) {
+      stars.push(<FaStarHalfAlt key="half" />);
+    }
+    return stars;
+  };
 
   return (
     <section className="w-full  mt-8 sm:mt-10 md:mt-12 lg:mt-14">
@@ -109,19 +63,18 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-4">
             <span className="h-[2px] w-10 bg-[#F9A61A]" />
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
-              Client Testimonials
+              {testimonialData.badge}
             </p>
             <span className="h-[2px] w-10 bg-[#F9A61A]" />
           </div>
 
           <h2 className="mt-1 text-3xl font-bold text-[#101D33] sm:text-4xl lg:text-5xl">
-            What Our Clients Say About{" "}
-            <span className="text-[#F9A61A]">CorpEase</span>
+            {testimonialData.titlePrefix}{" "}
+            <span className="text-[#F9A61A]">{testimonialData.titleHighlight}</span>
           </h2>
 
           <p className="mx-auto mt-2 max-w-[640px] text-xs text-slate-500 sm:text-sm md:text-base">
-            Trusted by entrepreneurs and businesses across India for smooth,
-            reliable and hassle-free company registration services.
+            {testimonialData.description}
           </p>
         </div>
 
@@ -133,7 +86,7 @@ export default function Testimonials() {
               transform: `translateX(-${firstItem * (100 / perView)}%)`,
             }}
           >
-            {testimonials.map(({ name, role, text, image }) => (
+            {testimonialData.testimonials?.map(({ name, role, comment, avatar, rating }) => (
               <div
                 key={name}
                 className="shrink-0 px-3"
@@ -146,7 +99,7 @@ export default function Testimonials() {
                   <div className="relative flex items-center gap-4">
                     <div className="relative h-[88px] w-[88px] shrink-0">
                       <Image
-                        src={image}
+                        src={avatar}
                         alt={name}
                         width={88}
                         height={88}
@@ -166,19 +119,15 @@ export default function Testimonials() {
                   </div>
 
                   <p className="relative mt-5 text-[15px] leading-relaxed text-slate-700">
-                    “{text}”
+                    “{comment}”
                   </p>
 
                   <div className="relative mt-4 flex items-center justify-between">
                     <div
                       className="flex gap-1 text-lg text-[#E39A12]"
-                      aria-label="Rated 4.5 out of 5"
+                      aria-label={`Rated ${rating} out of 5`}
                     >
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStarHalfAlt />
+                      {renderStars(rating)}
                     </div>
                     <FaQuoteRight className="text-5xl text-slate-200" />
                   </div>
@@ -197,7 +146,7 @@ export default function Testimonials() {
               onClick={() => setPage(i)}
               aria-label={`Go to testimonials page ${i + 1}`}
               aria-current={i === current}
-              className={`h-3 w-3 rounded-full transition-colors duration-300 ${
+              className={`h-3 w-3 rounded-full cursor-pointer transition-colors duration-300 ${
                 i === current
                   ? "bg-[#E39A12]"
                   : "bg-slate-300 hover:bg-slate-400"

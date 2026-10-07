@@ -5,14 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiArrowRight, FiMenu, FiX } from "react-icons/fi";
+import { site } from "@/data/index";
+import type { CorpEaseHeaderData } from "@/data/index";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Contact Us", href: "/contact" },
-];
+const headerData: CorpEaseHeaderData = site.navbar as CorpEaseHeaderData;
 
 /* Left-corner diagonal shape: navy block + yellow stripe, fading out at the bottom */
 function CornerShape() {
@@ -25,9 +21,9 @@ function CornerShape() {
     >
       <defs>
         <linearGradient id="navyFade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#2B3B4C" />
-          <stop offset="0.7" stopColor="#2B3B4C" />
-          <stop offset="1" stopColor="#2B3B4C" stopOpacity="0.55" />
+          <stop offset="0" stopColor="#101D33" />
+          <stop offset="0.7" stopColor="#101D33" />
+          <stop offset="1" stopColor="#101D33" />
         </linearGradient>
         <linearGradient id="yellowFade" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#F2A431" />
@@ -47,11 +43,13 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const isActive = (href) =>
+  const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  if (!headerData) return null;
+
   return (
-    <header className="relative w-full overflow-hidden bg-white">
+    <header className="sticky top-0 z-50 w-full overflow-hidden bg-white shadow-sm">
       <CornerShape />
 
       <div className="relative z-10 mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
@@ -59,10 +57,10 @@ export default function Navbar() {
           {/* Logo (left, pushed right of the corner shape on desktop) */}
           <Link href="/" className="flex shrink-0 items-center lg:ml-14">
             <Image
-              src="/logo.png"
-              alt="CorpEase - Company Registration Made Easy"
-              width={315}
-              height={80}
+              src={headerData.logo.src}
+              alt={headerData.logo.alt}
+              width={headerData.logo.width}
+              height={headerData.logo.height}
               priority
               className="h-auto w-[200px] sm:w-[250px] lg:w-[315px]"
             />
@@ -70,7 +68,7 @@ export default function Navbar() {
 
           {/* Desktop links (right after the logo) */}
           <nav className="ml-12 hidden items-center gap-10 xl:ml-20 lg:flex">
-            {navLinks.map(({ label, href }) => (
+            {headerData.navLinks.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
@@ -89,10 +87,10 @@ export default function Navbar() {
           {/* CTA (right) */}
           <div className="ml-auto flex items-center gap-3">
             <Link
-              href="/quote"
+              href={headerData.ctaButton.href}
               className="hidden items-center gap-3 rounded-xl bg-[#F2A431] px-7 py-4 text-[16px] font-semibold text-[#1F2A3C] transition hover:bg-[#E8A02F] sm:inline-flex"
             >
-              Get a Quote
+              {headerData.ctaButton.label}
               <FiArrowRight className="text-xl" />
             </Link>
 
@@ -115,7 +113,7 @@ export default function Navbar() {
         <div className="relative z-10 border-t border-gray-100 bg-white lg:hidden">
           <div className="mx-auto max-w-[1320px] px-4 py-4 sm:px-6 lg:px-8">
             <nav className="flex flex-col">
-              {navLinks.map(({ label, href }) => (
+              {headerData.navLinks.map(({ label, href }) => (
                 <Link
                   key={href}
                   href={href}
@@ -130,11 +128,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/quote"
+                href={headerData.ctaButton.href}
                 onClick={() => setOpen(false)}
                 className="mt-4 inline-flex items-center justify-center gap-3 rounded-xl bg-[#F2A431] px-6 py-3.5 font-semibold text-[#1F2A3C]"
               >
-                Get a Quote
+                {headerData.ctaButton.label}
                 <FiArrowRight className="text-xl" />
               </Link>
             </nav>

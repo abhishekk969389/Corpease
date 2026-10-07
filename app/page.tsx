@@ -1,24 +1,19 @@
-import Image from "next/image";
-import Navbar from "./components/navbar";
-import Hero from "./components/banner";
-import About from "./components/about";
-import Stats from "./components/impact";
-import Services from "./components/services";
-import Testimonials from "./components/testimonial";
-import Blog from "./components/blog";
-import Footer from "./components/footer";
+import Hero from "./components/homelayout/banner";
+import About from "./components/homelayout/about";
+import Stats from "./components/homelayout/impact";
+import Services from "./components/homelayout/services";
+import Testimonials from "./components/homelayout/testimonial";
+import Blog from "./components/homelayout/blog";
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <About/>
-    <Stats/>
-    <Services/>
-    <Testimonials/>
-    <Blog/>
-    <Footer/>
+      <Hero />
+      <About />
+      <Stats />
+      <Services limit={6} />
+      <Testimonials />
+      <Blog />
     </>
   );
 }

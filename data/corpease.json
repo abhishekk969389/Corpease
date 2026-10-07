@@ -1,0 +1,2090 @@
+{
+  "CorpEase": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Header": "CorpEaseHeader1",
+          "Footer": "CorpEaseFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "CorpEaseBanner1"
+              },
+              {
+                "key": "AboutSection",
+                "component": "CorpEaseAboutSection1"
+              },
+              {
+                "key": "Stats",
+                "component": "CorpEaseStats1"
+              },
+              {
+                "key": "Services",
+                "component": "CorpEaseServices1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "CorpEaseTestimonial1"
+              },
+              {
+                "key": "Blog",
+                "component": "CorpEaseBlog1"
+              }
+            ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "SubBanner",
+                "component": "CorpEaseAboutSubBanner1"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "SubBanner",
+                "component": "CorpEaseServicesSubBanner1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "SubBanner": {
+        "variants": {
+          "about": {
+            "title": "About Us",
+            "bgImage": "/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about"
+              }
+            ]
+          },
+          "services": {
+            "title": "Services",
+            "bgImage": "/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Services",
+                "href": "/services"
+              }
+            ]
+          },
+          "blog": {
+            "title": "Blogs",
+            "bgImage": "/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Blogs",
+                "href": "/blog"
+              }
+            ]
+          },
+          "quote": {
+            "title": "Get a Quote",
+            "bgImage":"/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Get a Quote",
+                "href": "/quote"
+              }
+            ]
+          },
+          "contact": {
+            "title": "Contact Us",
+            "bgImage": "/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            ]
+          },
+          "servicedetails": {
+            "title": "Service Details",
+            "bgImage": "/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Service",
+                "href": "/services"
+              },
+              {
+                "label": "Service Details",
+                "href": "#"
+              }
+            ]
+          },
+          "blogdetails": {
+            "title": "Blog Detail",
+            "bgImage": "/subb.jpg",
+            "breadcrumbs": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Blog Detail",
+                "href": "#"
+              }
+            ]
+          }
+        }
+      },
+      "Brand": {
+        "variants": {
+          "CorpEaseBrand1": {
+            "name": "CorpEase",
+            "tagline": "Company Registration Made Easy",
+            "logo": "/logo.jpeg"
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "CorpEaseHeader1": {
+            "logo": {
+              "src": "/logo.jpeg",
+              "alt": "CorpEase - Company Registration Made Easy",
+              "width": 315,
+              "height": 80
+            },
+            "navLinks": [
+              {
+                "id": "home",
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "id": "about",
+                "label": "About Us",
+                "href": "/about"
+              },
+              {
+                "id": "services",
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "id": "blogs",
+                "label": "Blogs",
+                "href": "/blog"
+              },
+              {
+                "id": "contact",
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "ctaButton": {
+              "label": "Get a Quote",
+              "href": "/quote"
+            }
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "CorpEaseBanner1": {
+            "badge": "Your Business, Our Expertise",
+            "titlePrefix": "Company",
+            "titleHighlight": "Registration",
+            "titleSuffix": "Made Easy",
+            "description": "From company formation to compliance, we provide end-to-end solutions to help you start, manage and grow your business with complete confidence.",
+            "bgImage": "/banner.jpeg",
+            "bgImageAlt": "Business consultants reviewing company registration documents",
+            "ctaButton": {
+              "label": "Get a Quote",
+              "href": "/quote"
+            }
+          }
+        }
+      },
+      "AboutSection": {
+        "variants": {
+          "CorpEaseAboutSection1": {
+            "badge": "About Us",
+            "titlePrefix": "Your Business",
+            "titleHighlight": "Our Priority",
+            "description": "We are committed to making business registration, compliance and advisory services simple, transparent and hassle-free. Our experienced team helps entrepreneurs and businesses focus on growth while we take care of the complexities.",
+            "image": "/about.jpg",
+            "imageAlt": "Consultants discussing company registration documents",
+            "features": [
+              {
+                "id": "1",
+                "no": "01",
+                "title": "Clear Guidance",
+                "text": "We simplify complex procedures and provide step-by-step guidance for a smooth business journey."
+              },
+              {
+                "id": "2",
+                "no": "02",
+                "title": "Tailored Solutions",
+                "text": "Our solutions are designed to meet your unique business needs and help you grow with confidence."
+              }
+            ],
+            "btnText": "Read More",
+            "btnLink": "/about"
+          }
+        }
+      },
+      "AboutPageDetails": {
+        "variants": {
+          "CorpEaseAboutPageDetails1": {
+            "badge": "About Us",
+            "titlePrefix": "Your Business",
+            "titleHighlight": "Our Priority",
+            "paragraphs": [
+              "We are committed to making business registration, compliance and advisory services simple, transparent and hassle-free. Our experienced team helps entrepreneurs and businesses focus on growth while we take care of the complexities.",
+              "We are committed to making business registration, compliance and advisory services simple, transparent and hassle-free. Our experienced team helps entrepreneurs and businesses focus on growth while we take care of the complexities.",
+              "We are committed to making business registration, compliance and advisory services simple, transparent and hassle-free. Our experienced team helps entrepreneurs and businesses focus on growth while we take care of the complexities."
+            ],
+            "image": "/about.jpg",
+            "imageAlt": "Consultants discussing company registration documents"
+          }
+        }
+      },
+      "Stats": {
+        "variants": {
+          "CorpEaseStats1": {
+            "badge": "Our Impact in Numbers",
+            "titlePrefix": "Hundreds of Customers",
+            "titleHighlight": "Trust in Our",
+            "titleSuffix": "Company",
+            "bgImage": "/service/s4.jpg", 
+            "bgImageAlt": "Smiling team members working together",
+            "ctaButton": {
+              "label": "Get a Quote",
+              "href": "/quote"
+            },
+            "stats": [
+              {
+                "id": "1",
+                "value": "180",
+                "label": "Project Completed",
+                "icon": "FiUsers"
+              },
+              {
+                "id": "2",
+                "value": "750",
+                "label": "Satisfied Clients",
+                "icon": "FiUserCheck"
+              },
+              {
+                "id": "3",
+                "value": "1050",
+                "label": "Repeat Customers",
+                "icon": "FiRepeat"
+              },
+              {
+                "id": "4",
+                "value": "280",
+                "label": "Product Delivery",
+                "icon": "FiPackage"
+              }
+            ]
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "CorpEaseServices1": {
+            "badge": "Our Services",
+            "titlePrefix": "Business Registration Solutions for Your",
+            "titleHighlight": "Future Success",
+            "description": "From company registration to compliance support, we provide end-to-end solutions to start, manage and grow your business with confidence.",
+            "services": [
+              {
+                "id": "1",
+                "title": "Private Limited Company Registration",
+                "description": "Register your Private Limited Company with expert guidance and complete legal support.",
+                "link": "/servicedetails/private-limited-company",
+                "icon": "FaBuilding",
+                "image": "/service/s1.jpg"
+              },
+              {
+                "id": "2",
+                "title": "LLP Registration",
+                "description": "Start your business with the flexibility of a Limited Liability Partnership.",
+                "link": "/servicedetails/llp",
+                "icon": "FaUsers",
+                "image": "/service/s5.jpg"
+              },
+              {
+                "id": "3",
+                "title": "One Person Company Registration",
+                "description": "Register your One Person Company and begin your entrepreneurial journey easily.",
+                "link": "/servicedetails/one-person-company",
+                "icon": "FaUser",
+                "image": "/service/s3.jpg"
+              },
+              {
+                "id": "4",
+                "title": "GST Registration",
+                "description": "Get GST registration and ensure your business is tax compliant.",
+                "link": "/servicedetails/gst",
+                "icon": "FaFileInvoice",
+                "image": "/service/s4.jpg"
+              },
+              {
+                "id": "5",
+                "title": "MSME / Udyam Registration",
+                "description": "Register under MSME and avail benefits, subsidies and new growth opportunities.",
+                "link": "/servicedetails/msme-udyam",
+                "icon": "FaCog",
+                "image": "/service/s5.jpg"
+              },
+              {
+                "id": "6",
+                "title": "Trademark Registration",
+                "description": "Protect your brand with trademark registration and secure your business identity.",
+                "link": "/servicedetails/trademark",
+                "icon": "FaRegRegistered",
+                "image": "/service/s1.jpg"
+              },
+              {
+                "id": "7",
+                "title": "Public Limited Company Registration",
+                "description": "Register your Public Limited Company to raise capital and grow at scale.",
+                "link": "/servicedetails/public-limited-company",
+                "icon": "FaCity",
+                "image": "/service/s4.jpg"
+              },
+              {
+                "id": "8",
+                "title": "FSSAI Registration",
+                "description": "Obtain your FSSAI license for your food business easily and quickly.",
+                "link": "/servicedetails/fssai",
+                "icon": "FaUtensils",
+                "image": "/service/s8.jpg"
+              },
+              {
+                "id": "9",
+                "title": "Startup India Registration",
+                "description": "Get DPIIT recognition and unlock startup benefits and tax exemptions.",
+                "link": "/servicedetails/startup-india",
+                "icon": "FaRocket",
+                "image": "/service/s4.jpg"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "CorpEaseTestimonial1": {
+            "badge": "Client Testimonials",
+            "titlePrefix": "What Our Clients Say About",
+            "titleHighlight": "CorpEase",
+            "description": "Trusted by entrepreneurs and businesses across India for smooth, reliable and hassle-free company registration services.",
+            "testimonials": [
+              {
+                "id": "t1",
+                "name": "Rahul Mehta",
+                "role": "Founder, Mehta Traders",
+                "rating": 4.5,
+                "comment": "The team at CorpEase made my Private Limited company registration completely hassle-free. Their guidance and support were excellent from start to finish. Highly recommended!",
+                "avatar": "/tes/t1.jpg"
+              },
+              {
+                "id": "t2",
+                "name": "Priya Sharma",
+                "role": "CEO, Sharma Enterprises",
+                "rating": 4.5,
+                "comment": "I registered my LLP with CorpEase and the entire process was smooth and transparent. The team is very professional, responsive and always available for support.",
+                "avatar": "/tes/t2.jpg"
+              },
+              {
+                "id": "t3",
+                "name": "Amit Verma",
+                "role": "Managing Director, Verma Solutions",
+                "rating": 4.5,
+                "comment": "Great experience with CorpEase. They handled my business registration efficiently and kept me updated at every step. Truly professional and reliable service.",
+                "avatar": "/tes/t3.jpg"
+              },
+              {
+                "id": "t4",
+                "name": "Neha Kapoor",
+                "role": "Founder, Kapoor Designs",
+                "rating": 4.5,
+                "comment": "From GST registration to trademark filing, CorpEase took care of everything. The paperwork was done quickly and I never had to chase anyone for updates.",
+                "avatar": "/tes/t4.jpg"
+              },
+              {
+                "id": "t5",
+                "name": "Vikram Singh",
+                "role": "Director, Singh Logistics",
+                "rating": 4.5,
+                "comment": "Their MSME registration support helped us unlock benefits we did not even know about. Clear communication and a very knowledgeable team throughout.",
+                "avatar": "/tes/t1.jpg"
+              },
+              {
+                "id": "t6",
+                "name": "Anjali Desai",
+                "role": "Co-founder, Desai Foods",
+                "rating": 4.5,
+                "comment": "Starting a company felt overwhelming until I found CorpEase. They explained every step in simple words and completed my registration ahead of schedule.",
+                "avatar": "/tes/t2.jpg"
+              },
+              {
+                "id": "t7",
+                "name": "Rohit Gupta",
+                "role": "Owner, Gupta Electronics",
+                "rating": 4.5,
+                "comment": "Affordable pricing, quick turnaround and genuinely helpful support. I have already recommended CorpEase to two friends who are starting their own businesses.",
+                "avatar": "/tes/t3.jpg"
+              },
+              {
+                "id": "t8",
+                "name": "Sneha Iyer",
+                "role": "CEO, Iyer Consulting",
+                "rating": 4.5,
+                "comment": "CorpEase handled our One Person Company registration and compliance setup smoothly. Their team is responsive and always ready to answer questions.",
+                "avatar": "/tes/t4.jpg"
+              },
+              {
+                "id": "t9",
+                "name": "Karan Malhotra",
+                "role": "Managing Partner, Malhotra & Co.",
+                "rating": 4.5,
+                "comment": "A dependable partner for all our registration needs. Documentation was accurate, deadlines were met and the whole experience was stress-free.",
+                "avatar": "/tes/t1.jpg"
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "CorpEaseBlog1": {
+            "badge": "Latest News",
+            "titlePrefix": "Read Our Latest",
+            "titleHighlight": "Insights & Blog",
+            "description": "Stay updated with expert insights, business registration tips and the latest news to help you grow your business.",
+            "posts": [
+              {
+                "id": "1",
+                "title": "A Complete Guide to Private Limited Company Registration",
+                "excerpt": "Learn the process, benefits and key requirements for registering a Private Limited Company in India.",
+                "date": "Oct 12, 2024",
+                "author": "Admin",
+                "link": "/blogdetails/private-limited-company-registration-guide",
+                "image": "/service/s1.jpg"
+              },
+              {
+                "id": "2",
+                "title": "LLP Registration: Benefits, Process and Compliance",
+                "excerpt": "Discover why an LLP is the right choice for your business and how to register it with ease.",
+                "date": "Oct 08, 2024",
+                "author": "Admin",
+                "link": "/blogdetails/llp-registration-benefits-process-compliance",
+                "image": "/service/s2.jpg"
+              },
+              {
+                "id": "3",
+                "title": "Trademark Registration: Protect Your Brand Identity",
+                "excerpt": "Know the importance of trademark registration and how it helps secure your brand in the competitive market.",
+                "date": "Oct 05, 2024",
+                "author": "Admin",
+                "link": "/blogdetails/trademark-registration-protect-your-brand",
+                "image": "/service/s3.jpg"
+              }
+            ]
+          },
+          "CorpEaseBlogPage1": {
+            "badge": "Latest News",
+            "titlePrefix": "Read All Our",
+            "titleHighlight": "Insights & Blog",
+            "description": "Stay updated with expert insights, business registration tips and the latest news to help you grow your business.",
+            "posts": [
+              {
+                "id": "1",
+                "title": "A Complete Guide to Private Limited Company Registration",
+                "excerpt": "Learn the process, benefits and key requirements for registering a Private Limited Company in India.",
+                "date": "Oct 12, 2024",
+                "author": "Admin",
+                "category": "Business Registration",
+                "link": "/blogdetails/private-limited-company-registration-guide",
+                "image": "/service/s1.jpg"
+              },
+              {
+                "id": "2",
+                "title": "LLP Registration: Benefits, Process and Compliance",
+                "excerpt": "Discover why an LLP is the right choice for your business and how to register it with ease.",
+                "date": "Oct 08, 2024",
+                "author": "Admin",
+                "category": "Company Formation",
+                "link": "/blogdetails/llp-registration-benefits-process-compliance",
+                "image": "/service/s2.jpg"
+              },
+              {
+                "id": "3",
+                "title": "Trademark Registration: Protect Your Brand Identity",
+                "excerpt": "Know the importance of trademark registration and how it helps secure your brand in the competitive market.",
+                "date": "Oct 05, 2024",
+                "author": "Admin",
+                "category": "Trademark & IP",
+                "link": "/blogdetails/trademark-registration-protect-your-brand",
+                "image": "/service/s3.jpg"
+              },
+              {
+                "id": "4",
+                "title": "GST Registration: Everything You Need to Know",
+                "excerpt": "Understand the GST registration process, eligibility criteria, and documents required for your business.",
+                "date": "Oct 01, 2024",
+                "author": "Admin",
+                "category": "GST & Taxation",
+                "link": "/blogdetails/gst-registration-guide",
+                "image": "/service/s4.jpg"
+              },
+              {
+                "id": "5",
+                "title": "Benefits of MSME Registration for Startups",
+                "excerpt": "Find out how MSME registration can unlock subsidies, lower interest rates, and growth opportunities.",
+                "date": "Sep 28, 2024",
+                "author": "Admin",
+                "category": "Business Growth",
+                "link": "/blogdetails/msme-registration-benefits",
+                "image": "/service/s5.jpg"
+              },
+              {
+                "id": "6",
+                "title": "Why You Need a Partnership Firm Registration",
+                "excerpt": "A deep dive into partnership firm registration and why it's a great choice for multiple founders.",
+                "date": "Sep 22, 2024",
+                "author": "Admin",
+                "category": "Company Formation",
+                "link": "/blogdetails/partnership-firm-registration",
+                "image": "/service/s6.jpg"
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "CorpEaseFooter1": {
+            "brand": {
+              "logo": "/logo.jpeg",
+              "alt": "CorpEase - Company Registration Made Easy",
+              "description": "At CorpEase, we simplify business registration with expert guidance, transparent processes and end-to-end support, helping you start, manage and grow your business with confidence."
+            },
+            "socialLinks": [
+              {
+                "platform": "Facebook",
+                "url": "#",
+                "icon": "FaFacebookF"
+              },
+              {
+                "platform": "Instagram",
+                "url": "#",
+                "icon": "FaInstagram"
+              },
+              {
+                "platform": "LinkedIn",
+                "url": "#",
+                "icon": "FaLinkedinIn"
+              },
+              {
+                "platform": "YouTube",
+                "url": "#",
+                "icon": "FaYoutube"
+              }
+            ],
+            "quickLinks": {
+              "title": "Quick Links",
+              "links": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "About Us",
+                  "href": "/about"
+                },
+                {
+                  "label": "Our Services",
+                  "href": "/services"
+                },
+                {
+                  "label": "Get a Quote",
+                  "href": "/quote"
+                },
+                {
+                  "label": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "label": "Contact Us",
+                  "href": "/contact"
+                }
+              ]
+            },
+            "ourServices": {
+              "title": "Our Services",
+              "links": [
+                {
+                  "label": "Private Limited Company",
+                  "href": "/servicedetails/private-limited-company"
+                },
+                {
+                  "label": "LLP Registration",
+                  "href": "/servicedetails/llp"
+                },
+                {
+                  "label": "One Person Company (OPC)",
+                  "href": "/servicedetails/one-person-company"
+                },
+                {
+                  "label": "Partnership Firm Registration",
+                  "href": "/servicedetails/trademark"
+                },
+                {
+                  "label": "GST Registration",
+                  "href": "/servicedetails/gst"
+                },
+                {
+                  "label": "MSME / Udyam Registration",
+                  "href": "/servicedetails/msme-udyam"
+                }
+              ]
+            },
+            "contactInfo": {
+              "title": "Get In Touch",
+              "items": [
+                {
+                  "id": "address",
+                  "icon": "FiMapPin",
+                  "lines": [
+                    "123 Business Avenue,",
+                    "Downtown District, New York,",
+                    "NY 10001, United States"
+                  ]
+                },
+                {
+                  "id": "phone",
+                  "icon": "FiPhone",
+                  "lines": [
+                    "+1 0000000000",
+                    "+1 0000000000"
+                  ]
+                },
+                {
+                  "id": "email",
+                  "icon": "FiMail",
+                  "lines": [
+                    "dummy@xyz.com",
+                    "dummy@abc.com"
+                  ]
+                }
+              ]
+            },
+            "bottomBar": {
+              "copyrightPrefix": "© 2026",
+              "brandName": "",
+              "copyrightSuffix": "All Rights Reserved. Powered By Lestow",
+              "legalLinks": [
+                {
+                  "label": "ThankYou",
+                  "href": "/thanku"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "CorpEaseWhyChooseUs1": {
+            "badge": "Why Choose Us",
+            "titlePrefix": "Excellent for better",
+            "titleHighlight": "solutions easier for",
+            "titleSuffix": "your business",
+            "description": "At CorpEase, we make business registration simple, fast and stress-free. Our expert team provides end-to-end support, transparent processes and personalized guidance so you can focus on growing your business with confidence.",
+            "leftFeatures": [
+              {
+                "title": "Business Growth",
+                "text": "Helping your business scale with the right legal structure.",
+                "icon": "FaChartLine"
+              },
+              {
+                "title": "Expert Guidance",
+                "text": "Dedicated support from registration to compliance.",
+                "icon": "FaUsers"
+              }
+            ],
+            "rightFeatures": [
+              {
+                "title": "Best Consultancy",
+                "text": "Our experts provide the best consultancy with practical solutions for your business needs.",
+                "icon": "FaRegThumbsUp"
+              },
+              {
+                "title": "Expert Team Members",
+                "text": "A dedicated team of professionals to guide you at every step.",
+                "icon": "FaUsers"
+              },
+              {
+                "title": "Reliable & Transparent",
+                "text": "Clear process, honest advice and complete transparency in every service.",
+                "icon": "MdOutlineVerifiedUser"
+              }
+            ],
+            "image": "/about.jpg",
+            "imageAlt": "Smiling business consultant working at his desk",
+            "badgeIcon": "FaChartLine",
+            "badgeTitle": "Top Quality",
+            "badgeSubtitle": "Business Solutions"
+          }
+        }
+      },
+      "Quote": {
+        "variants": {
+          "CorpEaseQuote1": {
+            "form": {
+              "badge": "Request a Quote",
+              "titlePrefix": "Fill in",
+              "titleHighlight": "Your Details",
+              "description": "Let us know your business requirements and our team will contact you shortly with the best solution and pricing.",
+              "serviceOptions": [
+                "Private Limited Company",
+                "LLP Registration",
+                "One Person Company (OPC)",
+                "Partnership Firm Registration",
+                "GST Registration",
+                "MSME / Udyam Registration",
+                "Trademark Registration",
+                "Compliance & Filings",
+                "Business Advisory",
+                "Other"
+              ]
+            },
+            "services": {
+              "badge": "Our Services",
+              "titlePrefix": "What Can We Help You With?",
+              "titleHighlight": "",
+              "description": "We provide customized registration and compliance solutions for businesses of all sizes.",
+              "helpCards": [
+                {
+                  "title": "Company Registration",
+                  "text": "Private Limited, OPC, LLP and more",
+                  "icon": "FaBuilding"
+                },
+                {
+                  "title": "Compliance & Filings",
+                  "text": "Annual filings, ROC compliance",
+                  "icon": "FaFileAlt"
+                },
+                {
+                  "title": "Partnership Firm Registration",
+                  "text": "Hassle-free and quick process",
+                  "icon": "FaHandshake"
+                },
+                {
+                  "title": "Trademark Registration",
+                  "text": "Brand protection and intellectual property",
+                  "icon": "FaRegRegistered"
+                },
+                {
+                  "title": "GST Registration",
+                  "text": "Registration and ongoing support",
+                  "icon": "FaFileInvoice"
+                },
+                {
+                  "title": "Business Advisory",
+                  "text": "Expert consultation and guidance",
+                  "icon": "FaUserTie"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "ContactSec": {
+        "variants": {
+          "CorpEaseContact1": {
+            "services": [
+              "Private Limited Registration",
+              "LLP Registration",
+              "GST Registration",
+              "Trademark Registration",
+              "Tax & Compliance",
+              "Other"
+            ],
+            "form": {
+              "badge": "Send Us a Message",
+              "titlePrefix": "Get in",
+              "titleHighlight": "Touch",
+              "description": "Fill out the form below and our team will get back to you shortly with the best solution for your needs."
+            },
+            "info": {
+              "badge": "Our Contact Information",
+              "titlePrefix": "Let's Start a",
+              "titleHighlight": "Conversation",
+              "description": "Reach out to us through any of the following channels or visit our office. We're always happy to assist you.",
+              "contactItems": [
+                {
+                  "icon": "FaPhoneAlt",
+                  "label": "Call Us",
+                  "lines": [
+                    "+1 0000000000",
+                    "+1 0000000000"
+                  ],
+                  "note": "Mon - Sat: 9:00 AM - 6:00 PM"
+                },
+                {
+                  "icon": "FiMail",
+                  "label": "Email Us",
+                  "lines": [
+                    "dummy@xyz.com",
+                    "dummy@abc.com"
+                  ],
+                  "note": "We usually respond within 24 hours."
+                },
+                {
+                  "icon": "FaMapMarkerAlt",
+                  "label": "Our Office",
+                  "lines": [
+                    "123 Business Avenue,",
+                    "Downtown District, New York,",
+                    "NY 10001, United States"
+                  ]
+                },
+                {
+                  "icon": "FiClock",
+                  "label": "Working Hours",
+                  "lines": [
+                    "Monday - Saturday: 9:00 AM - 6:00 PM",
+                    "Sunday: Closed"
+                  ]
+                }
+              ]
+            },
+            "map": {
+              "iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
+              "cardBadge": "Our Location",
+              "cardTitlePrefix": "Visit Our",
+              "cardTitleHighlight": "Office",
+              "cardDescription": "We'd love to meet you in person. Visit our office for a detailed discussion about your business requirements.",
+              "addressLines": [
+                "123 Business Avenue,",
+                "Downtown District, New York,",
+                "NY 10001, United States"
+              ],
+              "directionsLink": "https://www.google.com/maps/dir/?api=1&destination=Sector+62+Noida"
+            }
+          }
+        }
+      },
+      "ThankYou": {
+        "variants": {
+          "CorpEaseThankYou1": {
+            "titlePrefix": "Thank",
+            "titleHighlight": "You!",
+            "subtitle": "Your request has been submitted successfully.",
+            "description": "We appreciate you reaching out to CorpEase. Our team will review your details and get back to you shortly with the best solution for your business needs.",
+            "cards": [
+              {
+                "icon": "FiSearch",
+                "title": "Explore Our Services",
+                "text": "Discover our complete range of business registration and compliance services.",
+                "cta": "View Services",
+                "href": "/services"
+              },
+              {
+                "icon": "FiMessageSquare",
+                "title": "Talk to Our Experts",
+                "text": "Have more questions? Our team is always here to assist you.",
+                "cta": "Contact Us",
+                "href": "/contact"
+              },
+              {
+                "icon": "FiFileText",
+                "title": "Get a Custom Quote",
+                "text": "Need a personalized solution? Request a customized quote for your business.",
+                "cta": "Request a Quote",
+                "href": "/quote"
+              },
+              {
+                "icon": "FiBookOpen",
+                "title": "Read Our Blog",
+                "text": "Stay updated with the latest insights on business registration, compliance and more.",
+                "cta": "Visit Blog",
+                "href": "/blog"
+              }
+            ]
+          }
+        }
+      },
+      "ServiceSidebar": {
+        "variants": {
+          "CorpEaseServiceSidebar1": {
+            "title": "Our Services",
+            "assistance": {
+              "title": "Need Assistance?",
+              "description": "Get expert guidance for your business registration. Our team is here to help you Get expert guidance for your business registration. Our team is here to help you Get expert guidance for your business registration. Our team is here to help you.",
+              "phone": [
+                "+91 98765 43210",
+                "+91 11 2345 6789"
+              ],
+              "email": [
+                "info@corpease.com",
+                "support@corpease.com"
+              ]
+            }
+          }
+        }
+      },
+      "ServiceDetails": {
+        "variants": {
+          "private-limited-company": {
+            "title": "Private Limited Company Registration",
+            "slug": "private-limited-company",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Build Business with",
+              "titleHighlight": "Confidence",
+              "description": "A Private Limited Company (Pvt. Ltd.) is one of the most popular business structures in India. It offers limited liability, separate legal identity and greater credibility, making it ideal for startups, SMEs and growing businesses. At CorpEase, we handle the entire registration process, ensuring a smooth, hassle-free and compliant setup for your company.",
+              "image": "/service/s1.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Choose a",
+              "titleHighlight": "Private Limited Company?",
+              "items": [
+                {
+                  "title": "Limited Liability",
+                  "description": "Protect your personal assets from business liabilities.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Separate Legal Identity",
+                  "description": "Your company exists independently from its owners.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "More Credibility",
+                  "description": "Build trust with clients, investors and financial institutions.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Better Growth Opportunities",
+                  "description": "Easier to attract investment and expand your business.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Consultation",
+                  "description": "Understand your business needs.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Document Preparation",
+                  "description": "We prepare and verify all required documents.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Filing with Authorities",
+                  "description": "Complete application submission with MCA.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Registration & PAN/TAN",
+                  "description": "Get your Certificate of Incorporation and other essential documents.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "PAN Card (Directors)",
+                "Aadhaar Card (Directors)",
+                "Address Proof (Directors)",
+                "Passport Size Photographs",
+                "Proposed Company Name",
+                "Registered Office Address Proof",
+                "Business Activity Details",
+                "Digital Signature Certificate (DSC)"
+              ],
+              "image": "/service/s1.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "A Private Limited Company can be registered by Indian citizens, NRIs or foreign nationals with a minimum of 2 directors and 2 shareholders."
+            }
+          },
+          "llp": {
+            "title": "LLP Registration",
+            "slug": "llp",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Secure Your",
+              "titleHighlight": "LLP Registration",
+              "description": "A Limited Liability Partnership (LLP) offers the benefits of a partnership with limited liability. It's an excellent choice for professionals and growing businesses A Private Limited Company (Pvt. Ltd.) is one of the most popular business structures in India. It offers limited liability, separate legal identity and greater credibility.",
+              "image": "/service/s2.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Choose",
+              "titleHighlight": "LLP?",
+              "items": [
+                {
+                  "title": "Limited Liability",
+                  "description": "Partners are not personally liable for business debts.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Flexible Management",
+                  "description": "Easier to manage than a private limited company.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Tax Benefits",
+                  "description": "Certain tax exemptions and simpler compliance.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Separate Legal Entity",
+                  "description": "LLP exists as a separate legal entity.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Consultation",
+                  "description": "Understand your business needs.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Document Preparation",
+                  "description": "We prepare and verify all required documents.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Filing with Authorities",
+                  "description": "Complete application submission with MCA.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Registration",
+                  "description": "Get your Certificate of Incorporation.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "PAN Card of Partners",
+                "Address Proof of Partners",
+                "Registered Office Address Proof",
+                "Partnership Agreement details",
+                "Digital Signature Certificate (DSC)"
+              ],
+              "image": "/service/s2.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Any two individuals or bodies corporate can form an LLP in India."
+            }
+          },
+          "one-person-company": {
+            "title": "One Person Company Registration",
+            "slug": "one-person-company",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Start",
+              "titleHighlight": "One Person Company",
+              "description": "A Private Limited Company (Pvt. Ltd.) is one of the most popular business structures in India. It offers limited liability, separate legal identity and greater credibility, making it ideal for startups, SMEs and growing businesses. At CorpEase, we handle the entire registration process, ensuring a smooth, hassle-free and compliant setup for your company .",
+              "image": "/service/s3.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Choose",
+              "titleHighlight": "OPC?",
+              "items": [
+                {
+                  "title": "Sole Ownership",
+                  "description": "Complete control over your business.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Limited Liability",
+                  "description": "Your personal assets are protected.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Corporate Identity",
+                  "description": "Build trust with a registered company.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Easy Funding",
+                  "description": "Attract investors more easily than a proprietorship.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Consultation",
+                  "description": "Understand your business needs.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Document Preparation",
+                  "description": "We prepare and verify all required documents.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Filing",
+                  "description": "Complete application submission with MCA.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Registration",
+                  "description": "Get your Certificate of Incorporation.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "PAN Card",
+                "Aadhaar Card",
+                "Address Proof",
+                "Passport Size Photographs",
+                "Nominee details"
+              ],
+              "image": "/service/s3.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Only a natural person who is an Indian citizen and resident in India is eligible."
+            }
+          },
+          "gst": {
+            "title": "GST Registration",
+            "slug": "gst",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Stay Compliant with",
+              "titleHighlight": "GST Registration",
+              "description": "GST registration is mandatory for businesses crossing a certain turnover threshold. We make the process fast and error-free.",
+              "image": "/service/s4.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Get",
+              "titleHighlight": "GST Registered?",
+              "items": [
+                {
+                  "title": "Legal Compliance",
+                  "description": "Avoid penalties and operate legally.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Input Tax Credit",
+                  "description": "Claim credit for taxes paid on purchases.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Interstate Sales",
+                  "description": "Sell your products across state borders.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "E-commerce",
+                  "description": "Mandatory for selling on Amazon, Flipkart, etc.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Consultation",
+                  "description": "Check your GST applicability.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Document Prep",
+                  "description": "Compile necessary documents.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Filing",
+                  "description": "Submit details on GST portal.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "GSTIN Issued",
+                  "description": "Receive your GST certificate.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "PAN Card of Business",
+                "Identity Proof of Promoters",
+                "Business Registration Proof",
+                "Bank Account Proof",
+                "Place of Business Proof"
+              ],
+              "image": "/service/s4.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Should",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Businesses with turnover above ₹40 Lakhs (₹20 Lakhs for special states) or making inter-state supplies."
+            }
+          },
+          "msme-udyam": {
+            "title": "MSME / Udyam Registration",
+            "slug": "msme-udyam",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Unlock Benefits with",
+              "titleHighlight": "MSME Registration",
+              "description": "Register your enterprise as MSME to avail government subsidies, low-interest loans, and various other benefits.",
+              "image": "/service/s5.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Choose",
+              "titleHighlight": "MSME?",
+              "items": [
+                {
+                  "title": "Cheaper Loans",
+                  "description": "Lower interest rates on bank loans.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Govt Tenders",
+                  "description": "Preference in procuring government tenders.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Tax Rebates",
+                  "description": "Exemptions and rebates under direct tax laws.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Easy Credit",
+                  "description": "Collateral-free loans for MSMEs.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Consultation",
+                  "description": "Understand classification.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Gather Info",
+                  "description": "Aadhaar and PAN details.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Filing",
+                  "description": "Submit application on Udyam portal.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Certificate",
+                  "description": "Receive Udyam Certificate.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "Aadhaar Number",
+                "PAN Number",
+                "Bank Account Details",
+                "Business Activity Code (NIC)"
+              ],
+              "image": "/service/s5.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Micro, Small, and Medium Enterprises based on investment and turnover criteria."
+            }
+          },
+          "trademark": {
+            "title": "Trademark Registration",
+            "slug": "trademark",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Protect Your Brand with",
+              "titleHighlight": "Trademark Registration",
+              "description": "Secure your brand name, logo, or slogan with a registered trademark and prevent others from copying it.",
+              "image": "/service/s6.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Get a",
+              "titleHighlight": "Trademark?",
+              "items": [
+                {
+                  "title": "Brand Protection",
+                  "description": "Legal right to use the TM symbol.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Exclusive Rights",
+                  "description": "Prevent others from using similar marks.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Asset Creation",
+                  "description": "An intangible asset for your business.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Builds Trust",
+                  "description": "Customers trust registered brands more.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "TM Search",
+                  "description": "Check availability of the mark.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Filing",
+                  "description": "File application with registry.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Examination",
+                  "description": "Reply to any objections.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Registration",
+                  "description": "Get the Trademark Certificate.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "Applicant's Name and Address",
+                "Image of the Logo/Mark",
+                "Description of Goods/Services",
+                "Power of Attorney (TM-48)"
+              ],
+              "image": "/service/s6.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Individuals, companies, NGOs, or any legal entity can apply for a trademark."
+            }
+          },
+          "public-limited-company": {
+            "title": "Public Limited Company Registration",
+            "slug": "public-limited-company",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Scale Massive with",
+              "titleHighlight": "Public Limited Company",
+              "description": "A Public Limited Company allows you to raise capital from the public and offers high credibility for large scale businesses.",
+              "image": "/service/s8.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Choose",
+              "titleHighlight": "Public Limited?",
+              "items": [
+                {
+                  "title": "Raise Capital",
+                  "description": "Issue shares to the public.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Limited Liability",
+                  "description": "Protect personal assets.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Transferable Shares",
+                  "description": "Easy transfer of ownership.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "High Credibility",
+                  "description": "Strict compliance builds immense trust.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Consultation",
+                  "description": "Understand requirements.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Documentation",
+                  "description": "Prepare MOA and AOA.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Filing",
+                  "description": "Submit to MCA.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Incorporation",
+                  "description": "Receive Certificate.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "PAN and ID of Minimum 7 Members",
+                "Address Proof",
+                "Office Address Proof",
+                "DSC for Directors"
+              ],
+              "image": "/service/s8.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Minimum 7 members and 3 directors are required to form a public limited company."
+            }
+          },
+          "fssai": {
+            "title": "FSSAI Registration",
+            "slug": "fssai",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Start Your Food Business with",
+              "titleHighlight": "FSSAI License",
+              "description": "FSSAI registration is mandatory for anyone involved in the food business. Ensure food safety and legal compliance.",
+              "image": "/service/s2.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Get",
+              "titleHighlight": "FSSAI?",
+              "items": [
+                {
+                  "title": "Legal Requirement",
+                  "description": "Mandatory by law for food businesses.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Consumer Trust",
+                  "description": "FSSAI logo builds consumer confidence.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Expansion",
+                  "description": "Easier to expand and get loans.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Quality Control",
+                  "description": "Ensures standard food quality.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Determine Type",
+                  "description": "Basic, State, or Central license.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Documentation",
+                  "description": "Collect necessary proofs.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "Application",
+                  "description": "File on FosCos portal.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "License Issued",
+                  "description": "Receive FSSAI certificate.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "Photo Identity Proof",
+                "Business Address Proof",
+                "Food Safety Plan",
+                "List of Food Products"
+              ],
+              "image": "/service/s2.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Any food manufacturer, trader, restaurant, or grocery shop."
+            }
+          },
+          "startup-india": {
+            "title": "Startup India Registration",
+            "slug": "startup-india",
+            "overview": {
+              "badge": "OVERVIEW",
+              "titlePrefix": "Accelerate Growth with",
+              "titleHighlight": "Startup India",
+              "description": "Get recognized by DPIIT and unlock numerous benefits designed specifically for innovative startups in India.",
+              "image": "/service/s3.jpg"
+            },
+            "benefits": {
+              "badge": "KEY BENEFITS",
+              "titlePrefix": "Why Register for",
+              "titleHighlight": "Startup India?",
+              "items": [
+                {
+                  "title": "Tax Exemptions",
+                  "description": "Income tax exemption for 3 consecutive years.",
+                  "icon": "FiShield"
+                },
+                {
+                  "title": "Self-Certification",
+                  "description": "Compliance under environmental & labor laws.",
+                  "icon": "FiTrendingUp"
+                },
+                {
+                  "title": "Patent Rebates",
+                  "description": "80% rebate in patent filing fees.",
+                  "icon": "FiAward"
+                },
+                {
+                  "title": "Funding Access",
+                  "description": "Access to Fund of Funds for Startups.",
+                  "icon": "FiBarChart"
+                }
+              ]
+            },
+            "process": {
+              "badge": "OUR REGISTRATION PROCESS",
+              "titlePrefix": "Simple and",
+              "titleHighlight": "Hassle-Free Process",
+              "steps": [
+                {
+                  "step": "Step 01",
+                  "title": "Entity Registration",
+                  "description": "Must be a Pvt Ltd or LLP.",
+                  "icon": "FiFileText"
+                },
+                {
+                  "step": "Step 02",
+                  "title": "Profile Setup",
+                  "description": "Register on Startup portal.",
+                  "icon": "FiFile"
+                },
+                {
+                  "step": "Step 03",
+                  "title": "DPIIT Application",
+                  "description": "Apply for recognition.",
+                  "icon": "FiBriefcase"
+                },
+                {
+                  "step": "Step 04",
+                  "title": "Certificate",
+                  "description": "Receive recognition certificate.",
+                  "icon": "FiCheckCircle"
+                }
+              ]
+            },
+            "documents": {
+              "badge": "WHO CAN REGISTER?",
+              "titlePrefix": "Documents",
+              "titleHighlight": "Required",
+              "list": [
+                "Certificate of Incorporation",
+                "Brief of innovative nature",
+                "Details of Directors",
+                "Pitch Deck or Website link"
+              ],
+              "image": "/service/s3.jpg",
+              "footerBadge": "WHO REGISTER?",
+              "footerTitlePrefix": "Who Can",
+              "footerTitleHighlight": "Register?",
+              "footerDescription": "Private Limited Company or LLP less than 10 years old with turnover under ₹100 Crore."
+            }
+          }
+        }
+      },
+      "BlogDetails": {
+        "variants": {
+          "private-limited-company-registration-guide": {
+            "title": "A Complete Guide to Private Limited Company Registration",
+            "slug": "private-limited-company-registration-guide",
+            "date": "Oct 12, 2024",
+            "author": "Admin",
+            "category": "Business Registration",
+            "image": "/service/s1.jpg",
+            "content": {
+              "intro": "Starting a business is an exciting journey, and a Private Limited Company (Pvt. Ltd.) is one of the most popular and preferred business structures in India. It offers limited liability, separate legal identity and greater credibility, making it an ideal choice for startups, SMEs and growing businesses.",
+              "sections": [
+                {
+                  "title": "What is a Private Limited Company?",
+                  "paragraphs": [
+                    "A Private Limited Company is a type of privately held business entity registered under the Companies Act, 2013. It requires a minimum of 2 directors and 2 shareholders, and the liability of its members is limited to their shareholding. This structure is ideal for entrepreneurs who want to operate with professional credibility and safeguard their personal assets."
+                  ]
+                },
+                {
+                  "title": "Procedure for Registration",
+                  "paragraphs": [
+                    "The process of registering a Private Limited Company involves name approval, document submission, filing with the Ministry of Corporate Affairs (MCA) and obtaining the Certificate of Incorporation. With professional assistance, the entire process can be completed smoothly and without hassle."
+                  ]
+                },
+                {
+                  "title": "Conclusion",
+                  "paragraphs": [
+                    "A Private Limited Company is a strong foundation for long-term business success. It not only provides legal protection but also enhances your brand value and opens doors to new opportunities. If you are planning to start your business, registering a Private Limited Company can be the right step towards growth and sustainability."
+                  ]
+                }
+              ],
+              "benefits": {
+                "title": "Key Benefits of a Private Limited Company",
+                "items": [
+                  {
+                    "title": "Limited Liability",
+                    "description": "Personal assets remain protected from business liabilities.",
+                    "icon": "FiShield"
+                  },
+                  {
+                    "title": "Greater Credibility",
+                    "description": "Build trust with clients, investors and stakeholders.",
+                    "icon": "FiTrendingUp"
+                  },
+                  {
+                    "title": "Easy Fundraising",
+                    "description": "Attract investors and secure business loans with ease.",
+                    "icon": "FiUsers"
+                  },
+                  {
+                    "title": "Separate Legal Identity",
+                    "description": "Operates as an independent legal entity.",
+                    "icon": "FiFileText"
+                  }
+                ]
+              }
+            }
+          },
+          "llp-registration-benefits-process-compliance": {
+            "title": "LLP Registration: Benefits, Process and Compliance",
+            "slug": "llp-registration-benefits-process-compliance",
+            "date": "Oct 08, 2024",
+            "author": "Admin",
+            "category": "Company Formation",
+            "image": "/service/s2.jpg",
+            "content": {
+              "intro": "A Limited Liability Partnership (LLP) is a popular business structure that combines the flexibility of a partnership with the advantages of limited liability for its partners.",
+              "sections": [
+                {
+                  "title": "What is an LLP?",
+                  "paragraphs": [
+                    "An LLP is an alternative corporate business form that gives the benefits of limited liability of a company and the flexibility of a partnership. It is governed by the Limited Liability Partnership Act, 2008."
+                  ]
+                },
+                {
+                  "title": "Registration Process",
+                  "paragraphs": [
+                    "The registration process involves obtaining Digital Signatures, getting name approval, and filing the incorporation forms with the MCA."
+                  ]
+                },
+                {
+                  "title": "Conclusion",
+                  "paragraphs": [
+                    "LLP is highly suitable for professionals, micro and small businesses that are closely-held."
+                  ]
+                }
+              ],
+              "benefits": {
+                "title": "Key Benefits of an LLP",
+                "items": [
+                  {
+                    "title": "Limited Liability",
+                    "description": "Partners' liability is limited to their contribution.",
+                    "icon": "FiShield"
+                  },
+                  {
+                    "title": "No Minimum Capital",
+                    "description": "Can be started with any amount of capital.",
+                    "icon": "FiTrendingUp"
+                  },
+                  {
+                    "title": "Lower Compliance",
+                    "description": "Fewer compliance requirements than a Pvt Ltd company.",
+                    "icon": "FiFileText"
+                  },
+                  {
+                    "title": "Flexible Agreement",
+                    "description": "Internal structure can be easily managed by an agreement.",
+                    "icon": "FiUsers"
+                  }
+                ]
+              }
+            }
+          },
+          "trademark-registration-protect-your-brand": {
+            "title": "Trademark Registration: Protect Your Brand Identity",
+            "slug": "trademark-registration-protect-your-brand",
+            "date": "Oct 05, 2024",
+            "author": "Admin",
+            "category": "Trademark & IP",
+            "image": "/service/s3.jpg",
+            "content": {
+              "intro": "Your brand is your business's most valuable asset. Registering a trademark is the first and most crucial step in protecting your brand identity from infringement and unauthorized use.",
+              "sections": [
+                {
+                  "title": "Why Register a Trademark?",
+                  "paragraphs": [
+                    "A registered trademark grants you exclusive rights to use your brand name, logo, or slogan. It prevents competitors from confusing your customers with similar branding."
+                  ]
+                },
+                {
+                  "title": "The Registration Process",
+                  "paragraphs": [
+                    "The process includes conducting a trademark search, filing the application, examination by the registry, publication in the trademark journal, and finally, registration."
+                  ]
+                },
+                {
+                  "title": "Conclusion",
+                  "paragraphs": [
+                    "Don't wait until someone else steals your brand name. Secure your trademark today to build a lasting legacy."
+                  ]
+                }
+              ],
+              "benefits": {
+                "title": "Key Benefits of Trademark Registration",
+                "items": [
+                  {
+                    "title": "Exclusive Rights",
+                    "description": "Sole ownership of the brand name and logo.",
+                    "icon": "FiShield"
+                  },
+                  {
+                    "title": "Legal Protection",
+                    "description": "Strong legal defense against infringement.",
+                    "icon": "FiFileText"
+                  },
+                  {
+                    "title": "Asset Creation",
+                    "description": "Creates an intangible asset for the business.",
+                    "icon": "FiTrendingUp"
+                  },
+                  {
+                    "title": "Customer Trust",
+                    "description": "Builds brand recognition and trust among customers.",
+                    "icon": "FiUsers"
+                  }
+                ]
+              }
+            }
+          },
+          "gst-registration-guide": {
+            "title": "GST Registration: Everything You Need to Know",
+            "slug": "gst-registration-guide",
+            "date": "Oct 01, 2024",
+            "author": "Admin",
+            "category": "GST & Taxation",
+            "image": "/service/s4.jpg",
+            "content": {
+              "intro": "Goods and Services Tax (GST) is a comprehensive indirect tax in India. Proper GST registration and compliance are vital for smooth business operations.",
+              "sections": [
+                {
+                  "title": "Who Needs GST Registration?",
+                  "paragraphs": [
+                    "Any business whose turnover exceeds the threshold limit of Rs. 40 lakhs (Rs. 20 lakhs for special category states) must register for GST. Additionally, businesses involved in inter-state supply, e-commerce, and casual taxable persons require mandatory registration."
+                  ]
+                },
+                {
+                  "title": "How to Register?",
+                  "paragraphs": [
+                    "Registration can be done online through the GST portal by submitting required documents such as PAN, Aadhaar, and proof of business premises."
+                  ]
+                },
+                {
+                  "title": "Conclusion",
+                  "paragraphs": [
+                    "Timely GST registration ensures legal compliance, enables you to claim input tax credit, and expands your business horizons without interstate restrictions."
+                  ]
+                }
+              ],
+              "benefits": {
+                "title": "Advantages of GST Registration",
+                "items": [
+                  {
+                    "title": "Legal Recognition",
+                    "description": "Recognized legally as a supplier of goods/services.",
+                    "icon": "FiShield"
+                  },
+                  {
+                    "title": "Input Tax Credit",
+                    "description": "Claim credit for taxes paid on purchases.",
+                    "icon": "FiTrendingUp"
+                  },
+                  {
+                    "title": "E-commerce Selling",
+                    "description": "Mandatory for selling online.",
+                    "icon": "FiUsers"
+                  },
+                  {
+                    "title": "Inter-state Sales",
+                    "description": "Unrestricted supply of goods across states.",
+                    "icon": "FiFileText"
+                  }
+                ]
+              }
+            }
+          },
+          "msme-registration-benefits": {
+            "title": "Benefits of MSME Registration for Startups",
+            "slug": "msme-registration-benefits",
+            "date": "Sep 28, 2024",
+            "author": "Admin",
+            "category": "Business Growth",
+            "image": "/service/s5.jpg",
+            "content": {
+              "intro": "MSME (Micro, Small, and Medium Enterprises) registration provides numerous benefits designed to help small businesses and startups thrive in a competitive market.",
+              "sections": [
+                {
+                  "title": "What is MSME Registration?",
+                  "paragraphs": [
+                    "Also known as Udyam Registration, it is a government certification provided to micro, small, and medium-sized enterprises to support their growth through various schemes."
+                  ]
+                },
+                {
+                  "title": "The Registration Process",
+                  "paragraphs": [
+                    "The process is entirely online, paperless, and based on self-declaration. All you need is an Aadhaar Number and PAN."
+                  ]
+                },
+                {
+                  "title": "Conclusion",
+                  "paragraphs": [
+                    "With benefits ranging from cheaper loans to protection against delayed payments, MSME registration is highly recommended for all eligible startups."
+                  ]
+                }
+              ],
+              "benefits": {
+                "title": "Top Benefits of MSME Registration",
+                "items": [
+                  {
+                    "title": "Cheaper Bank Loans",
+                    "description": "Lower interest rates on business loans.",
+                    "icon": "FiTrendingUp"
+                  },
+                  {
+                    "title": "Tax Rebates",
+                    "description": "Exemptions under direct tax laws.",
+                    "icon": "FiShield"
+                  },
+                  {
+                    "title": "Protection from Delayed Payments",
+                    "description": "Legal protection against delayed payments from buyers.",
+                    "icon": "FiFileText"
+                  },
+                  {
+                    "title": "Govt Tenders Preference",
+                    "description": "Special preference and waivers in government tenders.",
+                    "icon": "FiUsers"
+                  }
+                ]
+              }
+            }
+          },
+          "partnership-firm-registration": {
+            "title": "Why You Need a Partnership Firm Registration",
+            "slug": "partnership-firm-registration",
+            "date": "Sep 22, 2024",
+            "author": "Admin",
+            "category": "Company Formation",
+            "image": "/service/s6.jpg",
+            "content": {
+              "intro": "When two or more people want to start a business together, a Partnership Firm is often the easiest and most traditional structure to adopt.",
+              "sections": [
+                {
+                  "title": "Understanding Partnership Firms",
+                  "paragraphs": [
+                    "A partnership firm is governed by the Indian Partnership Act, 1932. It involves a formal agreement (Partnership Deed) between the partners outlining their roles, profit-sharing ratio, and responsibilities."
+                  ]
+                },
+                {
+                  "title": "Is Registration Mandatory?",
+                  "paragraphs": [
+                    "While registration is not strictly mandatory, an unregistered partnership firm faces several legal disabilities, such as the inability to file a suit against a third party."
+                  ]
+                },
+                {
+                  "title": "Conclusion",
+                  "paragraphs": [
+                    "For a hassle-free operation and legal security, registering the partnership firm with the Registrar of Firms is highly advisable."
+                  ]
+                }
+              ],
+              "benefits": {
+                "title": "Benefits of Registered Partnership",
+                "items": [
+                  {
+                    "title": "Easy Formation",
+                    "description": "Minimal legal formalities compared to companies.",
+                    "icon": "FiTrendingUp"
+                  },
+                  {
+                    "title": "Legal Protection",
+                    "description": "Ability to sue third parties and partners.",
+                    "icon": "FiShield"
+                  },
+                  {
+                    "title": "Shared Responsibility",
+                    "description": "Burden of management and risks is shared.",
+                    "icon": "FiUsers"
+                  },
+                  {
+                    "title": "Flexibility",
+                    "description": "Partners can easily change terms via a revised deed.",
+                    "icon": "FiFileText"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
