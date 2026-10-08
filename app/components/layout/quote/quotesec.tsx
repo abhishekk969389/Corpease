@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 import { site } from "@/data/index";
 import type { CorpEaseQuoteData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const iconMap: Record<string, React.ElementType> = {
   FaBuilding,
@@ -61,25 +62,29 @@ export default function Quote({ data }: { data?: CorpEaseQuoteData }) {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Left: form */}
           <div className="flex flex-col">
-            <div className="flex items-center gap-4">
-              <span className="h-[2px] w-10 bg-[#F9A61A]" />
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
-                {quoteData.form.badge}
+            <AnimateIn direction="up" delay={0.1}>
+              <div className="flex items-center gap-4">
+                <span className="h-[2px] w-10 bg-[#F9A61A]" />
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
+                  {quoteData.form.badge}
+                </p>
+              </div>
+            </AnimateIn>
+
+            <AnimateIn direction="up" delay={0.2}>
+              <h2 className="mt-1 text-3xl font-bold sm:text-4xl lg:text-5xl text-[#101D33]">
+                {quoteData.form.titlePrefix} <span className="text-[#F9A61A]">{quoteData.form.titleHighlight}</span>
+              </h2>
+            </AnimateIn>
+
+            <AnimateIn direction="up" delay={0.3}>
+              <p className="mt-2 max-w-[560px] text-xs sm:text-sm md:text-base text-slate-500">
+                {quoteData.form.description}
               </p>
-            </div>
+            </AnimateIn>
 
-            <h2 className="mt-1 text-3xl font-bold sm:text-4xl lg:text-5xl text-[#101D33]">
-              {quoteData.form.titlePrefix} <span className="text-[#F9A61A]">{quoteData.form.titleHighlight}</span>
-            </h2>
-
-            <p className="mt-2 max-w-[560px] text-xs sm:text-sm md:text-base text-slate-500">
-              {quoteData.form.description}
-            </p>
-
-            <form
-              onSubmit={handleSubmit}
-              className="mt-6 flex flex-1 flex-col rounded-xl bg-slate-50 p-4 sm:p-5"
-            >
+            <AnimateIn direction="up" delay={0.4} className="mt-6 flex flex-1 flex-col rounded-xl bg-slate-50 p-4 sm:p-5">
+              <form onSubmit={handleSubmit} className="flex flex-1 flex-col">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="relative flex items-center">
                   <FiUser className={iconClass} />
@@ -170,33 +175,41 @@ export default function Quote({ data }: { data?: CorpEaseQuoteData }) {
                 Your information is 100% secure with us. We never share your
                 details.
               </p>
-            </form>
+              </form>
+            </AnimateIn>
           </div>
 
           {/* Right: services */}
           <div className="flex flex-col">
-            <div className="flex items-center gap-4">
-              <span className="h-[2px] w-10 bg-[#F9A61A]" />
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
-                {quoteData.services.badge}
+            <AnimateIn direction="up" delay={0.1}>
+              <div className="flex items-center gap-4">
+                <span className="h-[2px] w-10 bg-[#F9A61A]" />
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
+                  {quoteData.services.badge}
+                </p>
+              </div>
+            </AnimateIn>
+
+            <AnimateIn direction="up" delay={0.2}>
+              <h2 className="mt-1 text-2xl font-bold sm:text-3xl lg:text-4xl text-[#101D33]">
+                {quoteData.services.titlePrefix}
+              </h2>
+            </AnimateIn>
+
+            <AnimateIn direction="up" delay={0.3}>
+              <p className="mt-2 max-w-[560px] text-xs sm:text-sm md:text-base text-slate-500">
+                {quoteData.services.description}
               </p>
-            </div>
-
-            <h2 className="mt-1 text-2xl font-bold sm:text-3xl lg:text-4xl text-[#101D33]">
-              {quoteData.services.titlePrefix}
-            </h2>
-
-            <p className="mt-2 max-w-[560px] text-xs sm:text-sm md:text-base text-slate-500">
-              {quoteData.services.description}
-            </p>
+            </AnimateIn>
 
             <div className="mt-6 grid flex-1 auto-rows-fr gap-3 sm:grid-cols-2">
-              {quoteData.services.helpCards.map(({ title, text, icon }) => {
+              {quoteData.services.helpCards.map(({ title, text, icon }, idx) => {
                 const Icon = iconMap[icon] || FaBuilding;
                 return (
-                <div
+                <AnimateIn
+                  direction="up" delay={0.4 + idx * 0.1}
                   key={title}
-                  className="flex flex-col items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-3 py-3.5 text-center transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(16,29,51,0.10)]"
+                  className="flex flex-col h-full items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-3 py-3.5 text-center transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(16,29,51,0.10)]"
                 >
                   <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FDF1DD] text-[22px] text-[#F9A61A]">
                     <Icon className="h-8 w-8" />
@@ -207,7 +220,7 @@ export default function Quote({ data }: { data?: CorpEaseQuoteData }) {
                   <p className="mt-0.5 max-w-[240px] text-[13px] leading-snug text-slate-500">
                     {text}
                   </p>
-                </div>
+                </AnimateIn>
                 );
               })}
             </div>

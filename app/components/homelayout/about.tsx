@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnimateIn from "@/app/components/ui/animate-in";
 import { FiArrowRight } from "react-icons/fi";
 import { site } from "@/data/index";
 import type { CorpEaseAboutSectionData, CorpEaseAboutPageDetailsData } from "@/data/index";
@@ -29,7 +30,7 @@ export default function About({ data }: AboutProps) {
             </div>
 
             {/* Photo */}
-            <div className="relative ml-8 mt-8 mb-8 h-[340px] overflow-hidden rounded-[36px] shadow-xl sm:ml-10 sm:h-[430px]">
+            <AnimateIn direction="left" delay={0.2} className="relative ml-8 mt-8 mb-8 h-[340px] overflow-hidden rounded-[36px] shadow-xl sm:ml-10 sm:h-[430px]">
               <Image
                 src={aboutData.image}
                 alt={aboutData.imageAlt || "About us image"}
@@ -37,22 +38,26 @@ export default function About({ data }: AboutProps) {
                 sizes="(min-width: 1024px) 560px, 100vw"
                 className="object-cover"
               />
-            </div>
+            </AnimateIn>
           </div>
 
           {/* Right: content */}
           <div>
-            <div className="flex items-center gap-4">
-              <span className="h-[3px] w-10 rounded-full bg-[#F9A61A]" />
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-slate-500">
-                {aboutData.badge}
-              </p>
-            </div>
+            <AnimateIn direction="up" delay={0.1}>
+              <div className="flex items-center gap-4">
+                <span className="h-[3px] w-10 rounded-full bg-[#F9A61A]" />
+                <p className="text-sm font-medium uppercase tracking-[0.25em] text-slate-500">
+                  {aboutData.badge}
+                </p>
+              </div>
+            </AnimateIn>
 
-            <h2 className="text-4xl font-bold text-[#101D33] sm:text-5xl lg:text-6xl mt-2">
-              {aboutData.titlePrefix}
-              <span className="block text-[#F9A61A]">{aboutData.titleHighlight}</span>
-            </h2>
+            <AnimateIn direction="up" delay={0.2}>
+              <h2 className="text-4xl font-bold text-[#101D33] sm:text-5xl lg:text-6xl mt-2">
+                {aboutData.titlePrefix}
+                <span className="block text-[#F9A61A]">{aboutData.titleHighlight}</span>
+              </h2>
+            </AnimateIn>
 
             {aboutData.paragraphs ? (
               <div className="mt-6 space-y-5">
@@ -70,8 +75,8 @@ export default function About({ data }: AboutProps) {
 
                 {/* Feature points */}
                 <ul className="mt-4 space-y-6">
-                  {aboutData.features?.map(({ no, title, text }: any) => (
-                    <li key={no} className="flex items-center gap-5">
+                  {aboutData.features?.map(({ no, title, text }: any, idx: number) => (
+                    <AnimateIn as="li" direction="up" delay={0.3 + idx * 0.1} key={no} className="flex items-center gap-5">
                       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#FDF1DD] text-sm font-semibold text-[#F9A61A]">
                         {no}
                       </span>
@@ -84,18 +89,20 @@ export default function About({ data }: AboutProps) {
                           {text}
                         </p>
                       </div>
-                    </li>
+                    </AnimateIn>
                   ))}
                 </ul>
 
                 {/* CTA */}
-                <Link
-                  href={aboutData.btnLink}
-                  className="mt-9 inline-flex font-bold items-center gap-3 rounded-lg bg-[#F9A61A] px-7 py-3.5 text-[15px] text-[#101D33] transition hover:bg-[#E8960F]"
-                >
-                  {aboutData.btnText}
-                  <FiArrowRight className="text-xl" />
-                </Link>
+                <AnimateIn direction="up" delay={0.5}>
+                  <Link
+                    href={aboutData.btnLink}
+                    className="mt-9 inline-flex font-bold items-center gap-3 rounded-lg bg-[#F9A61A] px-7 py-3.5 text-[15px] text-[#101D33] transition hover:bg-[#E8960F]"
+                  >
+                    {aboutData.btnText}
+                    <FiArrowRight className="text-xl" />
+                  </Link>
+                </AnimateIn>
               </>
             )}
           </div>

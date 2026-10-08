@@ -10,6 +10,7 @@ import {
 
 import { site } from "@/data/index";
 import type { CorpEaseThankYouData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const iconMap: Record<string, React.ElementType> = {
   FiSearch,
@@ -73,58 +74,69 @@ export default function ThankYouSection({ data }: { data?: CorpEaseThankYouData 
             }
           `}</style>
 
-          <div className="relative mx-auto h-28 w-44 sm:h-32 sm:w-52">
-            {rays.map(([pos, rot, color], i) => (
+          <AnimateIn direction="up" delay={0.1}>
+            <div className="relative mx-auto h-28 w-44 sm:h-32 sm:w-52">
+              {rays.map(([pos, rot, color], i) => (
+                <span
+                  key={i}
+                  className={`ty-ray absolute h-3 w-[3px] rounded-full ${pos} ${rot} ${color}`}
+                  style={{ animationDelay: `${i * 0.18}s` }}
+                />
+              ))}
+
+              {/* ripple rings */}
+              <span className="ty-ripple absolute left-1/2 top-1/2 h-24 w-24 -ml-12 -mt-12 rounded-full bg-[#F9A61A]/30 sm:h-28 sm:w-28 sm:-ml-14 sm:-mt-14" />
               <span
-                key={i}
-                className={`ty-ray absolute h-3 w-[3px] rounded-full ${pos} ${rot} ${color}`}
-                style={{ animationDelay: `${i * 0.18}s` }}
+                className="ty-ripple absolute left-1/2 top-1/2 h-24 w-24 -ml-12 -mt-12 rounded-full bg-[#F9A61A]/30 sm:h-28 sm:w-28 sm:-ml-14 sm:-mt-14"
+                style={{ animationDelay: "1.2s" }}
               />
-            ))}
 
-            {/* ripple rings */}
-            <span className="ty-ripple absolute left-1/2 top-1/2 h-24 w-24 -ml-12 -mt-12 rounded-full bg-[#F9A61A]/30 sm:h-28 sm:w-28 sm:-ml-14 sm:-mt-14" />
-            <span
-              className="ty-ripple absolute left-1/2 top-1/2 h-24 w-24 -ml-12 -mt-12 rounded-full bg-[#F9A61A]/30 sm:h-28 sm:w-28 sm:-ml-14 sm:-mt-14"
-              style={{ animationDelay: "1.2s" }}
-            />
-
-            {/* glowing circle (yellow shadow above & below) */}
-            <span className="ty-glow absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#FFF3DF] sm:h-28 sm:w-28">
-              <span className="ty-pop flex h-16 w-16 items-center justify-center rounded-full bg-[#FFE7C2] text-4xl text-[#F9A61A] sm:h-20 sm:w-20">
-                <FiCheck strokeWidth={3} className="ty-check" />
+              {/* glowing circle (yellow shadow above & below) */}
+              <span className="ty-glow absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#FFF3DF] sm:h-28 sm:w-28">
+                <span className="ty-pop flex h-16 w-16 items-center justify-center rounded-full bg-[#FFE7C2] text-4xl text-[#F9A61A] sm:h-20 sm:w-20">
+                  <FiCheck strokeWidth={3} className="ty-check" />
+                </span>
               </span>
-            </span>
-          </div>
+            </div>
+          </AnimateIn>
 
-          <h2 className="mt-1 text-3xl font-bold sm:text-4xl lg:text-5xl text-[#101D33]">
-            {tyData.titlePrefix} <span className="text-[#F9A61A]">{tyData.titleHighlight}</span>
-          </h2>
+          <AnimateIn direction="up" delay={0.2}>
+            <h2 className="mt-1 text-3xl font-bold sm:text-4xl lg:text-5xl text-[#101D33]">
+              {tyData.titlePrefix} <span className="text-[#F9A61A]">{tyData.titleHighlight}</span>
+            </h2>
+          </AnimateIn>
 
-          <h3 className="mt-3 text-base font-bold text-[#101D33] sm:text-lg md:text-xl">
-            {tyData.subtitle}
-          </h3>
+          <AnimateIn direction="up" delay={0.3}>
+            <h3 className="mt-3 text-base font-bold text-[#101D33] sm:text-lg md:text-xl">
+              {tyData.subtitle}
+            </h3>
+          </AnimateIn>
 
-          <p className="mx-auto mt-2 max-w-[640px] text-xs sm:text-sm md:text-base text-slate-500">
-            {tyData.description}
-          </p>
+          <AnimateIn direction="up" delay={0.4}>
+            <p className="mx-auto mt-2 max-w-[640px] text-xs sm:text-sm md:text-base text-slate-500">
+              {tyData.description}
+            </p>
+          </AnimateIn>
 
-          <Link
-            href="/"
-            className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#101D33] px-8 py-3.5 text-sm font-semibold text-[#F9A61A] transition hover:bg-[#F9A61A] hover:text-[#101D33]"
-          >
-            Back to Home <FiArrowRight />
-          </Link>
+          <AnimateIn direction="up" delay={0.5}>
+            <Link
+              href="/"
+              className="mt-5 inline-flex items-center gap-2 rounded-md bg-[#101D33] px-8 py-3.5 text-sm font-semibold text-[#F9A61A] transition hover:bg-[#F9A61A] hover:text-[#101D33]"
+            >
+              Back to Home <FiArrowRight />
+            </Link>
+          </AnimateIn>
         </div>
 
         {/* ---------- Quick links ---------- */}
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {tyData.cards.map(({ icon, title, text, cta, href }) => {
+          {tyData.cards.map(({ icon, title, text, cta, href }, idx) => {
             const Icon = iconMap[icon] || FiSearch;
             return (
-            <div
+            <AnimateIn
+              direction="up" delay={0.3 + idx * 0.1}
               key={title}
-              className="flex flex-col rounded-lg border border-slate-100 bg-white p-5 shadow-sm"
+              className="flex flex-col h-full rounded-lg border border-slate-100 bg-white p-5 shadow-sm"
             >
               <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FFF1DC] text-2xl text-[#F9A61A]">
                 <Icon className="h-8 w-8" />
@@ -143,7 +155,7 @@ export default function ThankYouSection({ data }: { data?: CorpEaseThankYouData 
               >
                 {cta} <FiArrowRight />
               </Link>
-            </div>
+            </AnimateIn>
             );
           })}
         </div>

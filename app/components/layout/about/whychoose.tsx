@@ -3,6 +3,7 @@ import { FaChartLine, FaRegThumbsUp, FaUsers } from "react-icons/fa";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { site } from "@/data/index";
 import type { CorpEaseWhyChooseUsData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const iconMap: Record<string, React.ElementType> = {
   FaChartLine,
@@ -22,30 +23,36 @@ export default function WhyChooseUs({ data }: { data?: CorpEaseWhyChooseUsData }
         <div className="grid items-center gap-x-10 gap-y-14 md:grid-cols-2 lg:grid-cols-[1.2fr_0.9fr_0.9fr]">
           {/* Left: heading + intro + two features */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-4">
-              <span className="h-[2px] w-10 bg-[#F9A61A]" />
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
-                {whyData.badge}
+            <AnimateIn direction="up" delay={0.1}>
+              <div className="flex items-center gap-4">
+                <span className="h-[2px] w-10 bg-[#F9A61A]" />
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
+                  {whyData.badge}
+                </p>
+              </div>
+            </AnimateIn>
+
+            <AnimateIn direction="up" delay={0.2}>
+              <h2 className="mt-1 text-3xl font-bold sm:text-4xl lg:text-5xl text-[#101D33]">
+                {whyData.titlePrefix}{" "}
+                <span className="text-[#F9A61A]">
+                  {whyData.titleHighlight}
+                </span>{" "}
+                {whyData.titleSuffix}
+              </h2>
+            </AnimateIn>
+
+            <AnimateIn direction="up" delay={0.3}>
+              <p className="mt-2 max-w-[560px] text-xs sm:text-sm md:text-base leading-relaxed text-slate-500">
+                {whyData.description}
               </p>
-            </div>
-
-            <h2 className="mt-1 text-3xl font-bold sm:text-4xl lg:text-5xl text-[#101D33]">
-              {whyData.titlePrefix}{" "}
-              <span className="text-[#F9A61A]">
-                {whyData.titleHighlight}
-              </span>{" "}
-              {whyData.titleSuffix}
-            </h2>
-
-            <p className="mt-2 max-w-[560px] text-xs sm:text-sm md:text-base leading-relaxed text-slate-500">
-              {whyData.description}
-            </p>
+            </AnimateIn>
 
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              {whyData.leftFeatures.map(({ title, text, icon }) => {
+              {whyData.leftFeatures.map(({ title, text, icon }, idx) => {
                 const Icon = iconMap[icon] || FaChartLine;
                 return (
-                <div key={title} className="flex items-center gap-4">
+                <AnimateIn direction="up" delay={0.4 + idx * 0.1} key={title} className="flex items-center gap-4">
                   <span className="flex h-[76px] w-[76px] shrink-0 items-center justify-center rounded-full bg-[#FDF1DD] text-[34px] text-[#F9A61A] hover:bg-[#F9A61A] hover:text-[#FDF1DD]">
                     <Icon />
                   </span>
@@ -57,14 +64,14 @@ export default function WhyChooseUs({ data }: { data?: CorpEaseWhyChooseUsData }
                       {text}
                     </p>
                   </div>
-                </div>
+                </AnimateIn>
                 );
               })}
             </div>
           </div>
 
           {/* Middle: image with yellow bar and navy badge */}
-          <div className="relative mx-auto w-full max-w-[420px] pb-8 md:max-w-none lg:mx-0">
+          <AnimateIn direction="up" delay={0.3} className="relative mx-auto w-full max-w-[420px] pb-8 md:max-w-none lg:mx-0">
             {/* yellow bar behind the photo */}
             <span className="absolute bottom-16 left-0 top-10 w-8 rounded-xl bg-[#F9A61A]" />
 
@@ -86,7 +93,7 @@ export default function WhyChooseUs({ data }: { data?: CorpEaseWhyChooseUsData }
                 <span className="block text-[#F9A61A]">{whyData.badgeSubtitle}</span>
               </p>
             </div>
-          </div>
+          </AnimateIn>
 
           {/* Right: three points */}
           <div className="relative md:pl-8 lg:pl-10">
@@ -97,7 +104,10 @@ export default function WhyChooseUs({ data }: { data?: CorpEaseWhyChooseUsData }
               {whyData.rightFeatures.map(({ title, text, icon }, i) => {
                 const Icon = iconMap[icon] || FaChartLine;
                 return (
-                <li
+                <AnimateIn
+                  as="li"
+                  direction="left"
+                  delay={0.2 + i * 0.15}
                   key={title}
                   className={`relative flex items-start gap-4 py-5 first:pt-0 last:pb-0 ${
                     i < whyData.rightFeatures.length - 1
@@ -119,7 +129,7 @@ export default function WhyChooseUs({ data }: { data?: CorpEaseWhyChooseUsData }
                       {text}
                     </p>
                   </div>
-                </li>
+                </AnimateIn>
                 );
               })}
             </ul>

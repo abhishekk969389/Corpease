@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FiChevronRight } from "react-icons/fi";
 import { site } from "@/data/index";
 import type { CorpEaseSubBannerData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 export default function SubBanner({ data }: { data?: CorpEaseSubBannerData }) {
   const subBannerData = data || site.subBanners.about;
@@ -23,11 +24,14 @@ export default function SubBanner({ data }: { data?: CorpEaseSubBannerData }) {
 
       {/* Content */}
       <div className="relative z-10 text-center flex flex-col items-center">
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
-          {subBannerData.title}
-        </h1>
+        <AnimateIn direction="up" delay={0.1}>
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-4">
+            {subBannerData.title}
+          </h1>
+        </AnimateIn>
         
-        <div className="flex items-center gap-2 text-sm md:text-base font-medium mt-1">
+        <AnimateIn direction="up" delay={0.2}>
+          <div className="flex items-center gap-2 text-sm md:text-base font-medium mt-1">
           {subBannerData.breadcrumbs?.map((crumb: any, index: number) => {
             const isLast = index === subBannerData.breadcrumbs.length - 1;
             return (
@@ -45,7 +49,8 @@ export default function SubBanner({ data }: { data?: CorpEaseSubBannerData }) {
               </div>
             );
           })}
-        </div>
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );

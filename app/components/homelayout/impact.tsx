@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 import { site } from "@/data/index";
 import type { CorpEaseStatsData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const statsData: CorpEaseStatsData = site.stats as CorpEaseStatsData;
 
@@ -84,28 +85,34 @@ export default function Stats() {
         <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-14 xl:px-12">
           <div className="flex flex-col gap-8 pb-[140px] pt-14 lg:flex-row lg:items-start lg:justify-between lg:pt-16">
             <div>
-              <div className="flex items-center gap-4">
-                <span className="h-[2px] w-10 bg-[#3B8BFF]" />
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/90 sm:text-sm">
-                  {statsData.badge}
-                </p>
-              </div>
+              <AnimateIn direction="up" delay={0.1}>
+                <div className="flex items-center gap-4">
+                  <span className="h-[2px] w-10 bg-[#3B8BFF]" />
+                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/90 sm:text-sm">
+                    {statsData.badge}
+                  </p>
+                </div>
+              </AnimateIn>
 
-              <h2 className="mt-5 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-                {statsData.titlePrefix}
-                <span className="block">
-                  <span className="text-[#6FA8FF]">{statsData.titleHighlight}</span> {statsData.titleSuffix}
-                </span>
-              </h2>
+              <AnimateIn direction="up" delay={0.2}>
+                <h2 className="mt-5 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+                  {statsData.titlePrefix}
+                  <span className="block">
+                    <span className="text-[#6FA8FF]">{statsData.titleHighlight}</span> {statsData.titleSuffix}
+                  </span>
+                </h2>
+              </AnimateIn>
             </div>
 
-            <Link
-              href={statsData.ctaButton.href}
-              className="inline-flex w-fit items-center gap-4 rounded-md bg-[#2F80ED] px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#1F6FDB] lg:mt-3"
-            >
-              {statsData.ctaButton.label}
-              <FiArrowRight className="text-xl" />
-            </Link>
+            <AnimateIn direction="up" delay={0.3}>
+              <Link
+                href={statsData.ctaButton.href}
+                className="inline-flex w-fit items-center gap-4 rounded-md bg-[#2F80ED] px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#1F6FDB] lg:mt-3"
+              >
+                {statsData.ctaButton.label}
+                <FiArrowRight className="text-xl" />
+              </Link>
+            </AnimateIn>
           </div>
         </div>
       </div>
@@ -113,11 +120,13 @@ export default function Stats() {
       {/* Cards overlapping the image */}
       <div className="mx-auto max-w-[1320px] px-4 pb-16 sm:px-6 lg:px-14 xl:px-12">
         <div className="relative z-10 -mt-[100px] grid gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
-          {statsData.stats?.map(({ value, label, icon }) => {
+          {statsData.stats?.map(({ value, label, icon }, idx) => {
             const Icon = iconMap[icon] || FiUsers;
             return (
-              <div
+              <AnimateIn
                 key={label}
+                direction="up"
+                delay={0.2 + idx * 0.1}
                 className="group relative mt-11 rounded-xl bg-white px-6 pb-8 pt-16 text-center shadow-[0_10px_30px_rgba(15,27,61,0.10)] transition-transform duration-300 hover:-translate-y-1"
               >
                 {/* Icon circle */}
@@ -154,7 +163,7 @@ export default function Stats() {
                   {label}
                 </p>
                 <span className="mx-auto mt-5 block h-[3px] w-10 rounded-full bg-[#2F80ED] transition-all duration-300 group-hover:w-20" />
-              </div>
+              </AnimateIn>
             );
           })}
         </div>

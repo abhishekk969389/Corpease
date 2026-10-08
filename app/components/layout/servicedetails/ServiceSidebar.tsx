@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiChevronRight, FiPhoneCall, FiMail } from "react-icons/fi";
 import { site } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 export default function ServiceSidebar() {
   const pathname = usePathname();
@@ -13,7 +14,7 @@ export default function ServiceSidebar() {
   return (
     <div className="flex flex-col gap-8">
       {/* Our Services Menu */}
-      <div className="rounded-xl border border-slate-100 bg-slate-50 p-6">
+      <AnimateIn direction="up" delay={0.1} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
         <h3 className="mb-6 text-xl font-bold text-[#101D33] border-b border-slate-200 pb-4">
           {sidebarData.title}
              <div className="w-12 mt-2 h-[3px] bg-[#F59E0B] rounded-full"></div>
@@ -38,10 +39,10 @@ export default function ServiceSidebar() {
             );
           })}
         </ul>
-      </div>
+      </AnimateIn>
 
     {/* Need Assistance Card */}
-<div className="relative overflow-hidden rounded-2xl bg-[#101D33] p-7 sm:p-8 text-white shadow-xl">
+<AnimateIn direction="up" delay={0.2} className="relative overflow-hidden rounded-2xl bg-[#101D33] p-7 sm:p-8 text-white shadow-xl">
   {/* Background decorative circles */}
   <div className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#1A2C4D]/60 blur-xl" />
   <div className="pointer-events-none absolute -bottom-12 -left-12 h-44 w-44 rounded-full bg-[#1A2C4D]/60 blur-xl" />
@@ -91,7 +92,7 @@ export default function ServiceSidebar() {
       </div>
     </div>
   </div>
-</div>
+</AnimateIn>
     </div>
   );
 }

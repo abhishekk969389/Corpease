@@ -21,6 +21,7 @@ const CONTAINER = "mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-14 xl:px-12";
 
 import { site } from "@/data/index";
 import type { CorpEaseContactSecData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const iconMap: Record<string, React.ElementType> = {
   FaPhoneAlt,
@@ -43,18 +44,24 @@ function SectionHeading({
 }) {
   return (
     <div>
-      <div className="flex items-center gap-4">
-        <span className="h-[2px] w-10 bg-[#F9A61A]" />
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
-          {eyebrow}
+      <AnimateIn direction="up" delay={0.1}>
+        <div className="flex items-center gap-4">
+          <span className="h-[2px] w-10 bg-[#F9A61A]" />
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
+            {eyebrow}
+          </p>
+        </div>
+      </AnimateIn>
+      <AnimateIn direction="up" delay={0.2}>
+        <h2 className="mt-1 text-3xl font-bold sm:text-4xl text-[#101D33]">
+          {title} <span className="text-[#F9A61A]">{accent}</span>
+        </h2>
+      </AnimateIn>
+      <AnimateIn direction="up" delay={0.3}>
+        <p className="mt-2 max-w-[520px] text-xs sm:text-sm md:text-base text-slate-500">
+          {description}
         </p>
-      </div>
-      <h2 className="mt-1 text-3xl font-bold sm:text-4xl text-[#101D33]">
-        {title} <span className="text-[#F9A61A]">{accent}</span>
-      </h2>
-      <p className="mt-2 max-w-[520px] text-xs sm:text-sm md:text-base text-slate-500">
-        {description}
-      </p>
+      </AnimateIn>
     </div>
   );
 }
@@ -101,10 +108,11 @@ export default function ContactSection({ data }: { data?: CorpEaseContactSecData
               description={contactData.form.description}
             />
 
-            <form
-              onSubmit={onSubmit}
-              className="mt-6 flex flex-1 flex-col gap-4"
-            >
+            <AnimateIn direction="up" delay={0.4} className="mt-6 flex flex-1 flex-col gap-4">
+              <form
+                onSubmit={onSubmit}
+                className="flex flex-1 flex-col gap-4"
+              >
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className={fieldWrap}>
                   <FiUser className="shrink-0 text-lg text-[#F9A61A]" />
@@ -192,6 +200,7 @@ export default function ContactSection({ data }: { data?: CorpEaseContactSecData
                 data.
               </p>
             </form>
+            </AnimateIn>
           </div>
 
           {/* RIGHT: contact info */}
@@ -204,10 +213,10 @@ export default function ContactSection({ data }: { data?: CorpEaseContactSecData
             />
 
             <ul className="mt-6 space-y-2">
-              {contactData.info.contactItems.map(({ icon, label, lines, note }) => {
+              {contactData.info.contactItems.map(({ icon, label, lines, note }, idx) => {
                 const Icon = iconMap[icon] || FaPhoneAlt;
                 return (
-                <li
+                <AnimateIn as="li" direction="up" delay={0.4 + idx * 0.1}
                   key={label}
                   className="flex items-center gap-4 rounded-lg bg-slate-50 px-4 py-3"
                 >
@@ -227,7 +236,7 @@ export default function ContactSection({ data }: { data?: CorpEaseContactSecData
                       </p>
                     )}
                   </div>
-                </li>
+                </AnimateIn>
                 );
               })}
             </ul>
@@ -253,7 +262,7 @@ export default function ContactSection({ data }: { data?: CorpEaseContactSecData
       <div className="pointer-events-none absolute inset-0 mt-6">
   <div className={`${CONTAINER} flex h-full items-end sm:items-center`}>
     {/* max-w-[420px] ya max-w-md aur px-8 se card horizontally bada ho jayega */}
-    <div className="pointer-events-auto mb-4 w-full max-w-[420px] rounded-2xl bg-white px-8 py-6 shadow-2xl sm:mb-0">
+    <AnimateIn direction="up" delay={0.5} className="pointer-events-auto mb-4 w-full max-w-[420px] rounded-2xl bg-white px-8 py-6 shadow-2xl sm:mb-0">
       <SectionHeading
         eyebrow={contactData.map.cardBadge}
         title={contactData.map.cardTitlePrefix}
@@ -280,7 +289,7 @@ export default function ContactSection({ data }: { data?: CorpEaseContactSecData
       >
          Get Directions <FaArrowRight />
       </a>
-    </div>
+    </AnimateIn>
   </div>
 </div>
       </div>

@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { site } from "@/data/index";
 import type { CorpEaseTestimonialData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const testimonialData: CorpEaseTestimonialData = site.testimonialSec as CorpEaseTestimonialData;
 
@@ -60,26 +61,32 @@ export default function Testimonials() {
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-14 xl:px-12">
         {/* Heading */}
         <div className="mx-auto max-w-[760px] text-center">
-          <div className="flex items-center justify-center gap-4">
-            <span className="h-[2px] w-10 bg-[#F9A61A]" />
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
-              {testimonialData.badge}
+          <AnimateIn direction="up" delay={0.1}>
+            <div className="flex items-center justify-center gap-4">
+              <span className="h-[2px] w-10 bg-[#F9A61A]" />
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#101D33]">
+                {testimonialData.badge}
+              </p>
+              <span className="h-[2px] w-10 bg-[#F9A61A]" />
+            </div>
+          </AnimateIn>
+
+          <AnimateIn direction="up" delay={0.2}>
+            <h2 className="mt-1 text-3xl font-bold text-[#101D33] sm:text-4xl lg:text-5xl">
+              {testimonialData.titlePrefix}{" "}
+              <span className="text-[#F9A61A]">{testimonialData.titleHighlight}</span>
+            </h2>
+          </AnimateIn>
+
+          <AnimateIn direction="up" delay={0.3}>
+            <p className="mx-auto mt-2 max-w-[640px] text-xs text-slate-500 sm:text-sm md:text-base">
+              {testimonialData.description}
             </p>
-            <span className="h-[2px] w-10 bg-[#F9A61A]" />
-          </div>
-
-          <h2 className="mt-1 text-3xl font-bold text-[#101D33] sm:text-4xl lg:text-5xl">
-            {testimonialData.titlePrefix}{" "}
-            <span className="text-[#F9A61A]">{testimonialData.titleHighlight}</span>
-          </h2>
-
-          <p className="mx-auto mt-2 max-w-[640px] text-xs text-slate-500 sm:text-sm md:text-base">
-            {testimonialData.description}
-          </p>
+          </AnimateIn>
         </div>
 
         {/* Slider */}
-        <div className="mt-6 overflow-hidden pb-6 pt-2">
+        <AnimateIn direction="up" delay={0.4} className="mt-6 overflow-hidden pb-6 pt-2">
           <div
             className="-mx-3 flex transition-transform duration-500 ease-out"
             style={{
@@ -135,7 +142,7 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-        </div>
+        </AnimateIn>
 
         {/* Dots */}
         <div className="mt-2 flex items-center justify-center gap-2.5">

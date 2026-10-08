@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiChevronRight, FiPhoneCall, FiMail, FiCalendar } from "react-icons/fi";
 import { site } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 export default function BlogSidebar() {
   const sidebarData = site.serviceSidebar;
@@ -22,7 +23,7 @@ export default function BlogSidebar() {
   return (
     <div className="flex flex-col gap-8">
       {/* Categories Card */}
-      <div className="rounded-xl border border-slate-100 bg-slate-50 p-6">
+      <AnimateIn direction="up" delay={0.1} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
         <h3 className="mb-6 text-xl font-bold text-[#101D33] border-b border-slate-200 pb-4">
           Categories
                           <div className="w-12 mt-1 h-[3px] bg-[#F59E0B] rounded-full"></div>
@@ -40,10 +41,10 @@ export default function BlogSidebar() {
             </li>
           ))}
         </ul>
-      </div>
+      </AnimateIn>
 
       {/* Recent Posts Card */}
-      <div className="rounded-xl border border-slate-100 bg-slate-50 p-6">
+      <AnimateIn direction="up" delay={0.2} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
         <h3 className="mb-6 text-xl font-bold text-[#101D33] border-b border-slate-200 pb-4">
           Recent Posts
                           <div className="w-12 mt-1 h-[3px] bg-[#F59E0B] rounded-full"></div>
@@ -71,10 +72,10 @@ export default function BlogSidebar() {
             </Link>
           ))}
         </div>
-      </div>
+      </AnimateIn>
 
       {/* Need Assistance Card */}
-      <div className="rounded-xl bg-[#101D33] p-8 py-10 text-white relative overflow-hidden flex flex-col justify-center">
+      <AnimateIn direction="up" delay={0.3} className="rounded-xl bg-[#101D33] p-8 py-10 text-white relative overflow-hidden flex flex-col justify-center">
         {/* Background graphic */}
         <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#1A2C4D] opacity-50" />
         <div className="absolute -bottom-10 -left-10 h-32 w-32 rounded-full bg-[#1A2C4D] opacity-50" />
@@ -113,7 +114,7 @@ export default function BlogSidebar() {
             </div>
           </div>
         </div>
-      </div>
+      </AnimateIn>
     </div>
   );
 }

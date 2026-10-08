@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { site } from "@/data/index";
 import type { CorpEaseFooterData } from "@/data/index";
+import AnimateIn from "@/app/components/ui/animate-in";
 
 const footerData: CorpEaseFooterData = site.footer as CorpEaseFooterData;
 
@@ -43,7 +44,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-14 xl:px-12 py-8 ">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1.2fr_1.3fr] lg:gap-8">
           {/* Brand */}
-          <div>
+          <AnimateIn direction="up" delay={0.1}>
             <Link href="/" className="inline-block">
               <Image
                 src={footerData.brand.logo}
@@ -73,10 +74,10 @@ export default function Footer() {
                 );
               })}
             </div>
-          </div>
+          </AnimateIn>
 
           {/* Quick links */}
-          <div>
+          <AnimateIn direction="up" delay={0.2}>
             <ColumnHeading>{footerData.quickLinks.title}</ColumnHeading>
             <ul className="mt-6 space-y-3.5">
               {footerData.quickLinks.links?.map(({ label, href }) => (
@@ -91,10 +92,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </AnimateIn>
 
           {/* Services */}
-          <div>
+          <AnimateIn direction="up" delay={0.3}>
             <ColumnHeading>{footerData.ourServices.title}</ColumnHeading>
             <ul className="mt-6 space-y-3">
               {footerData.ourServices.links?.map(({ label, href }) => (
@@ -109,10 +110,10 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </AnimateIn>
 
           {/* Contact */}
-          <div>
+          <AnimateIn direction="up" delay={0.4}>
             <ColumnHeading>{footerData.contactInfo.title}</ColumnHeading>
             <ul className="mt-6 space-y-5">
               {footerData.contactInfo.items?.map(({ id, icon, lines }) => {
@@ -133,7 +134,7 @@ export default function Footer() {
                 );
               })}
             </ul>
-          </div>
+          </AnimateIn>
         </div>
       </div>
 
