@@ -606,22 +606,22 @@
             "socialLinks": [
               {
                 "platform": "Facebook",
-                "url": "#",
+                "url":"https://www.facebook.com",
                 "icon": "FaFacebookF"
               },
               {
                 "platform": "Instagram",
-                "url": "#",
+                "url": "https://www.instagram.com",
                 "icon": "FaInstagram"
               },
               {
                 "platform": "LinkedIn",
-                "url": "#",
+                "url":  "https://www.linkedin.com",
                 "icon": "FaLinkedinIn"
               },
               {
                 "platform": "YouTube",
-                "url": "#",
+                "url": "https://www.youtube.com",
                 "icon": "FaYoutube"
               }
             ],

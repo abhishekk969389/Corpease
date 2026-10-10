@@ -22,26 +22,6 @@ export default function BlogSidebar() {
 
   return (
     <div className="flex flex-col gap-8">
-      {/* Categories Card */}
-      <AnimateIn direction="up" delay={0.1} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
-        <h3 className="mb-6 text-xl font-bold text-[#101D33] border-b border-slate-200 pb-4">
-          Categories
-                          <div className="w-12 mt-1 h-[3px] bg-[#F59E0B] rounded-full"></div>
-        </h3>
-        <ul className="flex flex-col gap-3">
-          {categories.map((cat, i) => (
-            <li key={i}>
-              <Link
-                href="#"
-                className="flex items-center justify-between rounded-lg px-2 py-2 text-sm font-medium text-slate-600 transition-all hover:text-[#F9A61A]"
-              >
-                {cat}
-                <FiChevronRight className="text-lg text-slate-400" />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </AnimateIn>
 
       {/* Recent Posts Card */}
       <AnimateIn direction="up" delay={0.2} className="rounded-xl border border-slate-100 bg-slate-50 p-6">
