@@ -203,16 +203,11 @@
                 "id": "blogs",
                 "label": "Blogs",
                 "href": "/blog"
-              },
-              {
-                "id": "contact",
-                "label": "Contact Us",
-                "href": "/contact"
               }
             ],
             "ctaButton": {
-              "label": "Get a Quote",
-              "href": "/quote"
+              "label": "Contact Us",
+              "href": "/contact"
             }
           }
         }
@@ -641,10 +636,6 @@
                   "href": "/services"
                 },
                 {
-                  "label": "Get a Quote",
-                  "href": "/quote"
-                },
-                {
                   "label": "Blog",
                   "href": "/blog"
                 },
@@ -958,12 +949,12 @@
               "title": "Need Assistance?",
               "description": "Get expert guidance for your business registration. Our team is here to help you Get expert guidance for your business registration. Our team is here to help you Get expert guidance for your business registration. Our team is here to help you.",
               "phone": [
-                "+91 98765 43210",
-                "+91 11 2345 6789"
+                "+1 000000000",
+                "+1 000000000"
               ],
               "email": [
-                "info@corpease.com",
-                "support@corpease.com"
+                "dummy@xyz.com",
+                "dummy@abc.com"
               ]
             }
           }

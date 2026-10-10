@@ -127,38 +127,6 @@ export default function ThankYouSection({ data }: { data?: CorpEaseThankYouData 
             </Link>
           </AnimateIn>
         </div>
-
-        {/* ---------- Quick links ---------- */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {tyData.cards.map(({ icon, title, text, cta, href }, idx) => {
-            const Icon = iconMap[icon] || FiSearch;
-            return (
-            <AnimateIn
-              direction="up" delay={0.3 + idx * 0.1}
-              key={title}
-              className="flex flex-col h-full rounded-lg border border-slate-100 bg-white p-5 shadow-sm"
-            >
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#FFF1DC] text-2xl text-[#F9A61A]">
-                <Icon className="h-8 w-8" />
-              </span>
-
-              <h4 className="mt-3 text-base font-bold text-[#101D33]">
-                {title}
-              </h4>
-              <p className="mt-1 flex-1 text-sm md:text-base leading-snug text-slate-500">
-                {text}
-              </p>
-
-              <Link
-                href={href}
-                className="mt-4 inline-flex w-fit items-center gap-2 border-b-2 border-[#F9A61A] pb-0.5 text-sm md:text-base font-semibold text-[#101D33] transition hover:gap-3"
-              >
-                {cta} <FiArrowRight />
-              </Link>
-            </AnimateIn>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

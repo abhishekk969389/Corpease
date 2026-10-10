@@ -66,8 +66,8 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop links (right after the logo) */}
-          <nav className="ml-12 hidden items-center gap-10 xl:ml-20 lg:flex">
+          {/* Desktop links (aligned right) */}
+          <nav className="hidden flex-1 items-center justify-end gap-10 lg:flex mr-8 xl:mr-12">
             {headerData.navLinks.map(({ label, href }) => (
               <Link
                 key={href}

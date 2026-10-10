@@ -98,7 +98,7 @@ export default function Stats() {
                 <h2 className="mt-5 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
                   {statsData.titlePrefix}
                   <span className="block">
-                    <span className="text-[#6FA8FF]">{statsData.titleHighlight}</span> {statsData.titleSuffix}
+                    <span  className="text-[#F9A61A]">{statsData.titleHighlight}</span> {statsData.titleSuffix}
                   </span>
                 </h2>
               </AnimateIn>
@@ -107,7 +107,7 @@ export default function Stats() {
             <AnimateIn direction="up" delay={0.3}>
               <Link
                 href={statsData.ctaButton.href}
-                className="inline-flex w-fit items-center gap-4 rounded-md bg-[#2F80ED] px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#1F6FDB] lg:mt-3"
+                className="inline-flex w-fit items-center gap-4 rounded-md bg-[#F9A61A] px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-black transition  lg:mt-3"
               >
                 {statsData.ctaButton.label}
                 <FiArrowRight className="text-xl" />
@@ -142,7 +142,7 @@ export default function Stats() {
                         cy="44"
                         r="42.5"
                         fill="none"
-                        stroke="#3B8BFF"
+                        stroke="#F9A61A"
                         strokeWidth="3"
                         strokeLinecap="round"
                         pathLength="100"
@@ -150,8 +150,8 @@ export default function Stats() {
                         className="[stroke-dashoffset:100] transition-[stroke-dashoffset] duration-700 ease-out group-hover:[stroke-dashoffset:0]"
                       />
                     </svg>
-                    <span className="flex h-full w-full items-center justify-center rounded-full bg-[#0A1530] text-white">
-                      <Icon className="text-[34px]" strokeWidth={1.5} />
+                    <span className="flex h-full w-full items-center justify-center rounded-full bg-[#F9A61A] text-white">
+                      <Icon className="text-[34px] text-black" strokeWidth={1.5} />
                     </span>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function Stats() {
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-slate-600">
                   {label}
                 </p>
-                <span className="mx-auto mt-5 block h-[3px] w-10 rounded-full bg-[#2F80ED] transition-all duration-300 group-hover:w-20" />
+                <span className="mx-auto mt-5 block h-[3px] w-10 rounded-full bg-[#F9A61A] transition-all duration-300 group-hover:w-20" />
               </AnimateIn>
             );
           })}
