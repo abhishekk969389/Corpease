@@ -139,15 +139,15 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-slate-200">
-        <div className="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-4 px-4 py-5 sm:px-6 md:flex-row lg:px-14 xl:px-12">
-          <p className="text-[15px] text-slate-700">
+      <div className="bg-[#101D33]/93">
+        <div className="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-4 px-4 py-4 sm:px-6 md:flex-row lg:px-14 xl:px-12">
+          <p className="text-[15px] text-white">
             {footerData.bottomBar.copyrightPrefix}{" "}
             <span className="font-semibold text-[#F9A61A]">{footerData.bottomBar.brandName}</span>
             {footerData.bottomBar.copyrightSuffix}
           </p>
 
-          <ul className="flex flex-wrap items-center justify-center gap-y-2 text-sm text-[#101D33]">
+          <ul className="flex flex-wrap items-center justify-center gap-y-2 text-sm text-white">
             {footerData.bottomBar.legalLinks?.map(({ label, href }, i) => (
               <li key={label} className="flex items-center">
                 {i > 0 && (
